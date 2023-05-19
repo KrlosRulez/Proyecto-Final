@@ -111,6 +111,7 @@ div.datos > div > div:nth-child(2) {
 }
 
 div.datos > div.fecha > div.numeros {
+    padding-top: 1px;
     color: white;
 }
 
@@ -141,5 +142,6 @@ div#contenido > div#bloque-secundario {
     height: 1000px; /* Quitar luego */
 }
 
+/* Copiar Aquí */
 
 /* </bloque secundario> */
