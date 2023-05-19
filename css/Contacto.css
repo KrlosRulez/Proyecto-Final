@@ -1,5 +1,7 @@
 div#contenido {
     border: 1px solid green;
+
+    position: relative;
 }
 
 /* Textos */
@@ -104,5 +106,59 @@ div.formulario > form > div.web > div.foto {
 div#contenido > div.info {
     border: 1px solid pink;
 
-    /* SEGUIR AQUÍ */
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+    height: 530px;
+
+    position: absolute;
+    top: 0px;
+    left: 770px;
+}
+
+div.info > div.datos {
+    border: 1px solid red;
+}
+
+div.info > div.datos > div.titulo {
+    border-top: 1px dashed yellow;
+    border-bottom: 1px dashed yellow;
+
+    padding: 10px;
+    font-family: 'Oswald';
+    font-size: 20px;
+}
+
+div.info > div.datos > div.texto {
+    /*border: 1px solid blue;*/
+
+    padding: 10px 0px 10px 0px;
+    font-family: 'Oswald';
+    line-height: 25px;
+}
+
+div.info > div.datos > div.texto > span {
+    color: #d8450b;
+}
+
+div.info > div.mapa {
+    border: 1px solid green;
+
+    margin-top: 10px;
+    height: 280px;
+}
+
+div.info > div.mapa > div.titulo {
+    border-top: 1px dashed yellow;
+    border-bottom: 1px dashed yellow;
+
+    padding: 10px;
+    font-family: 'Oswald';
+    font-size: 20px;
+}
+
+div.info > div.mapa > div.dibujo {
+    border: 1px solid purple;
+
+    height: 237px;
 }

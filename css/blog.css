@@ -21,6 +21,7 @@ div#bloque-principal > div.articulo {
 
 div.articulo > div {
     float: left;
+    font-family: 'Oswald';
 }
 
 div.articulo > div.foto {
@@ -40,8 +41,6 @@ div.articulo > div.titulo {
     padding: 10px;
 
     font-size: 30px;
-    font-family: 'Oswald';
-
 }
 
 div.articulo > div.texto {
