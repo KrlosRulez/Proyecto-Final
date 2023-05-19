@@ -1,0 +1,145 @@
+div#contenido {
+    border: 1px solid yellow;
+}
+
+/* <bloque principal> */
+div#contenido > div#bloque-principal {
+    border: 1px solid blue;
+    float: left;
+
+    width: 732px;
+    height: 1000px; /* Quitar luego */
+}
+
+div#bloque-principal > div.articulo {
+    border: 1px solid red;
+
+    width: 712px;
+    height: 205px;
+    padding: 10px;
+}
+
+div.articulo > div {
+    float: left;
+}
+
+div.articulo > div.foto {
+    border: 1px solid green;
+
+    width: 240px;
+    height: 200px;
+
+    background-image: url("https://picsum.photos/240/200/?random=2");
+}
+
+div.articulo > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+
+    width: 448px;
+    padding: 10px;
+
+    font-size: 30px;
+    font-family: 'Oswald';
+
+}
+
+div.articulo > div.texto {
+    border: 1px solid blue;
+
+    width: 448px;
+    margin: 10px;
+}
+
+div.articulo > div.leer {
+    border: 1px solid white;
+
+    width: 70px;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div.articulo > div.leer > a {
+    color: white;
+    width: 100%;
+    height: 100%;    
+}
+
+div.articulo > div.leer > a:hover {
+    color: #d8450b;
+}
+
+div.articulo > div.datos {
+    /*border: 1px solid yellow;*/
+
+    width: 448px;
+    margin-left: 10px;
+
+    font-family: 'Oswald';
+}
+
+div.articulo > div.datos > div {
+    float: left;
+}
+
+div.datos > div > div {
+    float: left;
+}
+
+div.datos div.foto {
+    /*border: 1px solid blue;*/
+
+    width: 15px;
+    height: 15px;
+    margin-left: 8px;
+
+    background-image: url(../img/glyphicons-halflings-white.png);
+    background-repeat: no-repeat;
+}
+
+div.datos > div.fecha > div.foto {
+    margin-left: 0px;
+}
+
+div.datos > div > div:nth-child(2) {
+    /*border: 1px solid pink;*/
+
+    color: #d8450b;
+    margin-left: 4px;
+}
+
+div.datos > div.fecha > div.numeros {
+    color: white;
+}
+
+div.fecha > div.foto {
+    background-position: -191px -118px;
+}
+
+div.autor > div.foto {
+    background-position: -167px 2px;
+}
+
+div.comentarios > div.foto {
+    background-position: -239px -118px;
+}
+
+div.etiquetas > div.foto {
+    background-position: -24px -46px;
+}
+
+/* </bloque principal> */
+
+/* <bloque secundario> */
+div#contenido > div#bloque-secundario {
+    border: 1px solid yellow;
+    float: right;
+
+    width: 432px;
+    height: 1000px; /* Quitar luego */
+}
+
+
+/* </bloque secundario> */

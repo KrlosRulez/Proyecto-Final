@@ -1,0 +1,189 @@
+div#pie {
+	position: relative;
+	top: 20px;
+
+	width: 1080px;
+	margin: 30px auto;
+	/*border: 1px solid blue;*/
+}
+
+div#pie > div {
+	float: left;
+	position: relative;
+	border: 1px solid red;
+}
+
+div#pie > div.nosotros {
+	width: 116px;
+	height: 80px;
+}
+
+/* Logo */
+div.nosotros > div.logo {
+	border: 1px solid blue;
+	width: 116px;
+	height: 50px;
+}
+
+/* Cambiar diseño del texto de al lado del logo */
+div#pie div.logo > p {
+	position: relative;
+	top: -20px;
+
+	border: 1px solid yellow;
+	display: inline;
+	font-size: 10px;
+	font-family: 'Indie Flower', cursive;
+}
+
+/* Cambiar diseño de la dirección bajo el logo */
+div#pie div.direccion > p {
+	border: 1px solid pink;
+
+	margin-top: 5px;
+	font-size: 12px;
+	color: lightgray;
+	font-family: 'Indie Flower', cursive;
+}
+
+div#pie > div.mapa {
+	left: 70px;
+
+	width: 240px;
+	height: 200px;
+}
+
+div#pie > div.posts {
+	left: 90px;
+
+	width: 240px;
+	height: 200px;
+}
+
+div#pie > div.galeria {
+	left: 110px;
+
+	width: 368px;
+	height: 200px;
+}
+
+div#pie > div.social {
+	left: 0px;
+	top: 20px;
+
+	width: 250px;	/* Cambiar a 250px */
+	height: 50px;
+}
+
+div#pie > div.menu {
+	top: 30px;
+
+	width: 1080px;
+	height: 30px;
+}
+
+/* Imagenes Redes Sociales */
+div.social div {
+	/*border: 1px solid green;*/
+	float: left;
+	width: 46px;
+	height: 47px;
+
+	background-image: url(../img/social-icons.png);
+}
+
+div.social div.facebook {
+	background-position: 0px 0px;
+}
+
+div.social div.facebook:hover {
+	background-position: 0px 47px;
+}
+
+div.social div.twitter {
+	background-position: -52px 0px;
+}
+
+div.social div.twitter:hover {
+	background-position: -52px 47px;
+}
+
+div.social div.baloncesto {
+	background-position: -104px 0px;
+}
+
+div.social div.baloncesto:hover {
+	background-position: -104px 47px;
+}
+
+div.social div.wifi {
+	background-position: -156px 0px;
+}
+
+div.social div.wifi:hover {
+	background-position: -156px 47px;
+}
+
+div.social div.arbol {
+	background-position: -208px 0px;
+}
+
+div.social div.arbol:hover {
+	background-position: -208px 47px;
+}
+
+/* Menú Inferior */
+div.menu > div.copyright {
+	border: 1px solid yellow;
+	width: 255px;
+	margin-top: 7px;
+	margin-left: 5px;
+}
+
+/* Cambiar diseño del texto de copyright */
+div.menu > div.copyright p {
+	font-size: 12px;
+	color: lightgray;
+	font-family: 'Indie Flower', cursive;
+}
+
+div.menu > div.copyright p:hover {
+	color: #d8450b;
+}
+
+/* Menú Inferior */
+div.menu_inferior {
+	/*border: 1px solid green;*/
+	position: relative; /* Posicionado para menú */
+}
+
+/*  */
+
+div.menu_inferior > ul {
+	position: absolute;
+	left: 750px;
+	top: -15px;
+}
+
+div.menu_inferior > ul > li {
+	border: 1px solid blue;
+
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	width: 60px;
+
+	float: left;
+}
+
+/* Hacer que los enlaces ocupen todo el li */
+div.menu_inferior > ul > li > a {
+	/*border: 1px solid white;*/
+
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+div.menu_inferior > ul > li:hover > a {
+	color: #d8450b;
+}
