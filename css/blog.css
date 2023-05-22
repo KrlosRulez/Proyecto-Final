@@ -21,7 +21,6 @@ div#bloque-principal > div.articulo {
 
 div.articulo > div {
     float: left;
-    font-family: 'Oswald';
 }
 
 div.articulo > div.foto {
@@ -41,6 +40,8 @@ div.articulo > div.titulo {
     padding: 10px;
 
     font-size: 30px;
+    font-family: 'Oswald';
+
 }
 
 div.articulo > div.texto {
@@ -141,6 +142,149 @@ div#contenido > div#bloque-secundario {
     height: 1000px; /* Quitar luego */
 }
 
-/* Copiar Aquí */
+/* Barra de búsquedas */
+div#bloque-secundario > div.barra {
+    border: 1px solid red;
 
+    width: 350px;
+    height: 25px;
+
+    margin: 10px;
+}
+
+/* Categorías */
+div#bloque-secundario > div.categorias {
+    border: 1px solid green;
+
+    width: 400px;
+    height: 210px;
+
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+div#bloque-secundario > div.categorias > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+    
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+
+div#bloque-secundario > div.categorias > div.nombre {
+    border-bottom: 1px dashed blue;
+
+    height: 18px; /* Quitar luego */
+    padding: 10px;
+    font-family: 'Oswald';
+}
+
+div.categorias > div.nombre div {
+    float: left;
+}
+
+div.categorias > div.nombre > div.foto {
+    /*border: 1px solid green;*/
+
+    margin-top: 1px;
+    width: 15px;
+    height: 15px;
+
+    background-image: url(../img/glyphicons-halflings-white.png);
+    background-repeat: no-repeat;
+    background-position: 1px -96px;
+}
+
+div.categorias > div.nombre > div.categoria {
+    /*border: 1px solid pink;*/
+
+    margin-left: 8px;
+}
+
+div.categorias > div.nombre > div.categoria > a {
+    /*border: 1px solid yellow;*/
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+}
+
+div.categorias > div.nombre > div.categoria > a:hover {
+    color: #d8450b;
+}
+
+/* Posts */
+div#bloque-secundario > div.posts {
+    border: 1px solid blue;
+
+    width: 400px;
+    height: 320px;
+
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+div.posts > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+    
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+
+div.posts > div.post {
+    border: 1px solid yellow;
+
+    height: 65px; /* Quitar luego */
+    padding: 10px;
+
+    position: relative;
+}
+
+div.posts > div.post > div {
+    float: left;
+}
+
+div.posts > div.post > div.foto {
+    border: 1px solid white;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("https://picsum.photos/60/60/?random=3");
+}
+
+div.posts > div.post > div.nombre {
+    border: 1px solid red;
+
+    width: 300px;
+    font-family: 'Oswald';
+    margin-left: 10px;
+}
+
+div.posts > div.post > div.nombre > a {
+    color: white;
+}
+
+div.posts > div.post > div.nombre > a:hover {
+    color: #d8450b;
+}
+
+div.posts > div.post > div.fecha {
+    border: 1px solid blue;
+
+    margin-top: 10px;
+    margin-left: 10px;
+
+    position: absolute;
+    top: 40px;
+    left: 72px;
+
+    font-family: 'Oswald';
+    font-style: italic;
+}
 /* </bloque secundario> */
