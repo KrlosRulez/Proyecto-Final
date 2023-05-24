@@ -44,19 +44,19 @@ div.boton {
 }
 
 div.contenedor3d > div:nth-child(1) > div.boton {
-	animation: animacionboton 12s infinite 0.25s;
+	animation: animacionboton 12s ease-in-out infinite 0.25s;
 }
 
 div.contenedor3d > div:nth-child(2) > div.boton {
-	animation: animacionboton 12s infinite 0.5s;
+	animation: animacionboton 12s ease-in-out infinite 0.5s;
 }
 
 div.contenedor3d > div:nth-child(3) > div.boton {
-	animation: animacionboton 12s infinite 0.75s;
+	animation: animacionboton 12s ease-in-out infinite 0.75s;
 }
 
 div.contenedor3d > div:nth-child(4) > div.boton {
-	animation: animacionboton 12s infinite 1s;
+	animation: animacionboton 12s ease-in-out infinite 1s;
 }
 
 div.contenedor3d div.boton > div {
