@@ -285,9 +285,11 @@ div#contenido {
     position: relative;
     left: 4px;
 
+	overflow: hidden;
 	width: 1088px;
+	/*height: 700px; /* Quitar Luego */
 	margin: 30px auto;
-	/*border: 1px solid green;*/
+	border: 1px solid green;
 }
 
 div#contenido > ul > li.noticia {
@@ -303,7 +305,7 @@ div#contenido > ul > li.noticia {
 
 li.noticia > div.imagen {
 	/*border: 1px solid black;*/
-	background-image: url("https://picsum.photos/248/220/?random=1");
+	
 	width: 248px;
 	height: 220px;
 }
@@ -370,6 +372,8 @@ li.noticia > div.texto > span.titulo_foto {
 	display: block;
 	font-size: 20px;
 
+	padding: 3px 0px 0px 5px;;
+
 	color: black;
 }
 
@@ -381,11 +385,9 @@ li.noticia > div.texto > span.texto_foto {
 
 	font-style: oblique;
 
+	padding: 3px 0px 0px 5px;
+
 	color: black;
 }
 
 /* </contenido> */
-
-div#contenedor {
-	height: 1490px;
-}

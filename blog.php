@@ -1,3 +1,11 @@
+<?php 
+
+	include ("conexion.php"); 
+
+    $sql = $conexion->query("SELECT * FROM Categorías");
+
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -27,107 +35,7 @@
 
 	<div id="contenedor">
 
-		<div id="encabezado">
-
-			<div id="logo">
-				<img src="img/logo-pagina.png" height="55px" />
-				<p>Maquinitas.com</p>
-			</div>
-
-			<div id="menu">
-
-				<ul id="menu_principal">
-
-                    <li>
-                        <a href="#">
-                            <span>Consolas</span>
-                        </a>
-                        <div class="panel">
-                            <ul class="submenu">
-                                <li>
-                                    <a href="#">
-                                        <span>PlayStation 4</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>Xbox 360</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>Nintendo Switch</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#"><span>Juegos</span></a>
-                        <div class="panel">
-                            <ul class="submenu">
-                                <li>
-                                    <a href="#">
-                                        <span>God of War</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>Tomb Raider</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>Prototype</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#"><span>Portables</span></a>
-                        <div class="panel">
-                            <ul class="submenu">
-                                <li>
-                                    <a href="#">
-                                        <span>PS Vita</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>Wii U</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>Nintendo DS</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="blog.html"><span>Blog</span></a>
-                    </li>
-
-                    <li>
-                        <a href="Contacto.html"><span>Contacto</span></a>
-                    </li>
-
-                    <li>
-                        <a href="tela.com.es:8080/tela/Ejercicios_Formularios/webapp/Ejercicio_2.jsp"><span>Iniciar Sesión</span></a>
-                    </li>
-
-                </ul>
-
-			</div>
-
-		</div>
-
-		<p class="limpiar"></p>
+        <?php include ("encabezado.php"); ?>
 
         <div id="contenido">
 
@@ -371,33 +279,17 @@
                         Categorías
                     </div>
 
-                    <div class="nombre">
-                        <div class="foto"></div>
-                            <div class="categoria">
-                                <a href="#">CATEGORÍA</a>
-                            </div>
-                    </div>
+                    <?php while ($fila=$sql -> fetch_array()) { ?>
 
                     <div class="nombre">
                         <div class="foto"></div>
                             <div class="categoria">
-                                <a href="#">CATEGORÍA</a>
+                                <a href="blog.php?categoria=<?php echo $fila[0]; ?>"><?php echo $fila[1]; ?></a>
                             </div>
                     </div>
 
-                    <div class="nombre">
-                        <div class="foto"></div>
-                            <div class="categoria">
-                                <a href="#">CATEGORÍA</a>
-                            </div>
-                    </div>
+                    <?php } ?>
 
-                    <div class="nombre">
-                        <div class="foto"></div>
-                            <div class="categoria">
-                                <a href="#">CATEGORÍA</a>
-                            </div>
-                    </div>
                 </div>
 
                 <div class="posts">
@@ -516,90 +408,7 @@
 
         <p class="limpiar"></p>
 
-        <div id="pie">
-
-			<div class="nosotros">
-				<div class="logo">
-					<img src="img/logo-pagina.png" height="50px" />
-					<p>Maquinitas.com</p>
-				</div>
-				<div class="direccion">
-					<p>
-						Calle Street, 106<br />
-						Avnd. Hijos de P
-					</p>
-				</div>
-			</div>
-
-			<div class="mapa">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.408766278483!2d-5.9843270242042506!3d37.356503672093716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126e7f03d8309f%3A0x5c813182e6db9555!2sEstadio%20Benito%20Villamar%C3%ADn!5e0!3m2!1ses!2ses!4v1684344864895!5m2!1ses!2ses" width="240" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
-
-			<div class="posts">
-				Posts
-			</div>
-
-			<div class="galeria">
-				<iframe width="368" height="200" src="https://www.youtube.com/embed/W78jqH6skjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			</div>
-			
-			<div class="social">
-				
-				<a href="#">
-					<div class="facebook"></div>
-				</a>
-
-				<a href="#">
-					<div class="twitter"></div>
-				</a>
-
-				<a href="#">
-					<div class="baloncesto"></div>
-				</a>
-
-				<a href="#">
-					<div class="wifi"></div>
-				</a>
-
-				<a href="#">
-					<div class="arbol"></div>
-				</a>
-
-
-			</div>
-
-			<div class="menu">
-				
-				<div class="copyright">
-					<a href="#">
-						<p>Copyright 2023 Maquinitas.com | All Rights Reserved</p>
-					</a>
-				</div>
-
-				<div class="menu_inferior">
-					<ul>
-						<li>
-							<a href="#">Consolas</a>
-						</li>
-						<li>
-							<a href="#">Juegos</a>
-						</li>
-						<li>
-							<a href="#">Portables</a>
-							
-						</li>
-						<li>
-							<a href="#">Blog</a>
-						</li>
-						<li>
-							<a href="#">Contacto</a>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-
-		</div>
+        <?php include ("pie.php"); ?>
 
 	</div>
 
