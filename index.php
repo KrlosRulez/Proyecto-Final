@@ -1,8 +1,7 @@
 <?php
-include("conexion.php");
+	include("conexion.php");
 
-$sql = $conexion->query("SELECT * FROM Noticias");
-
+	$sql = $conexion->query("SELECT * FROM Noticias");
 ?>
 
 <!DOCTYPE html>

@@ -9,8 +9,6 @@ div#contenido-foto > div {
 div#contenido-foto > div.foto {
     border: 1px solid red;
 
-    background-image: url("https://picsum.photos/570/660/?random=2");
-
     width: 570px;
     height: 660px;
 }

@@ -29,7 +29,7 @@ div.articulo > div.foto {
     width: 240px;
     height: 200px;
 
-    background-image: url("https://picsum.photos/240/200/?random=2");
+    
 }
 
 div.articulo > div.titulo {
@@ -238,7 +238,7 @@ div#bloque-secundario > div.posts {
     border: 1px solid blue;
 
     width: 400px;
-    height: 320px;
+    
 
     margin-top: 35px;
     margin-left: 10px;
@@ -272,7 +272,6 @@ div.posts > div.post > div.foto {
     width: 60px;
     height: 60px;
 
-    background-image: url("https://picsum.photos/60/60/?random=3");
 }
 
 div.posts > div.post > div.nombre {
@@ -310,8 +309,8 @@ div#bloque-secundario > div.comentarios {
     border: 1px solid green;
 
     width: 400px;
-    height: 320px;
-
+    
+    font-family: 'Oswald';
     margin-top: 35px;
     margin-left: 10px;
 }

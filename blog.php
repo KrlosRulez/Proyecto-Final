@@ -2,8 +2,6 @@
 
 	include ("conexion.php"); 
 
-    $sql = $conexion->query("SELECT * FROM Categorías");
-
 ?>
 
 <!DOCTYPE html>
@@ -41,20 +39,22 @@
 
             <div id="bloque-principal">
 
+            <?php 
+
+            $sql = $conexion->query("SELECT * FROM Posts JOIN Categorías ON Posts.Categoria=Categorías.Codigo_Categoria");
+
+            while ($fila=$sql -> fetch_array()) { 
+            
+            ?>
+
                 <div class="articulo">
 
-                    <div class="foto"></div>
-                    <div class="titulo">TÍTULO DEL ARTÍCULO</div>
+                    <div class="foto">
+                        <img src="img/<?php echo $fila[1]; ?>" width="100%" height="100%">
+                    </div>
+                    <div class="titulo"><?php echo $fila[2]; ?></div>
                     <div class="texto">
-                        texto noticia texto noticia
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
+                        <?php echo $fila[4]; ?>
                     </div>
                     <div class="leer">
                         <a href="#">
@@ -66,192 +66,49 @@
                         <div class="fecha">
                             <div class="foto"></div>
                             <div class="numeros">
-                                01/01/99
+                                <?php echo $fila[5]; ?>
                             </div>
                         </div>
 
                         <div class="autor">
                             <div class="foto"></div>
                             <div class="nombre">
-                                Autor
+                                <?php echo $fila[3]; ?>
                             </div>
                         </div>
 
                         <div class="comentarios">
                             <div class="foto"></div>
                             <div class="cantidad">
-                                0 Comentarios
+
+                            <?php 
+
+                            $cod_post = $fila[0];
+
+                            $sql_comentarios = $conexion->query("SELECT COUNT(*) AS Numero_Comentarios FROM Comentarios WHERE Codigo_Post = $cod_post");
+
+                            while ($fila_comentarios=$sql_comentarios -> fetch_array()) { 
+
+                            ?>
+
+                                <?php echo $fila_comentarios[0]; ?> Comentarios
+
+                            <?php } ?>
+
                             </div>
                         </div>
 
                         <div class="etiquetas">
                             <div class="foto"></div>
                             <div class="nombres">
-                                Etiquetas, etiquetas
+                                <?php echo $fila[8]; ?>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                <div class="articulo">
-
-                    <div class="foto"></div>
-                    <div class="titulo">TÍTULO DEL ARTÍCULO</div>
-                    <div class="texto">
-                        texto noticia texto noticia
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                    </div>
-                    <div class="leer">
-                        <a href="#">
-							<p>Leer Más</p>
-						</a>
-                    </div>
-                    <div class="datos">
-
-                        <div class="fecha">
-                            <div class="foto"></div>
-                            <div class="numeros">
-                                01/01/99
-                            </div>
-                        </div>
-
-                        <div class="autor">
-                            <div class="foto"></div>
-                            <div class="nombre">
-                                Autor
-                            </div>
-                        </div>
-
-                        <div class="comentarios">
-                            <div class="foto"></div>
-                            <div class="cantidad">
-                                0 Comentarios
-                            </div>
-                        </div>
-
-                        <div class="etiquetas">
-                            <div class="foto"></div>
-                            <div class="nombres">
-                                Etiquetas, etiquetas
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="articulo">
-
-                    <div class="foto"></div>
-                    <div class="titulo">TÍTULO DEL ARTÍCULO</div>
-                    <div class="texto">
-                        texto noticia texto noticia
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                    </div>
-                    <div class="leer">
-                        <a href="#">
-							<p>Leer Más</p>
-						</a>
-                    </div>
-                    <div class="datos">
-
-                        <div class="fecha">
-                            <div class="foto"></div>
-                            <div class="numeros">
-                                01/01/99
-                            </div>
-                        </div>
-
-                        <div class="autor">
-                            <div class="foto"></div>
-                            <div class="nombre">
-                                Autor
-                            </div>
-                        </div>
-
-                        <div class="comentarios">
-                            <div class="foto"></div>
-                            <div class="cantidad">
-                                0 Comentarios
-                            </div>
-                        </div>
-
-                        <div class="etiquetas">
-                            <div class="foto"></div>
-                            <div class="nombres">
-                                Etiquetas, etiquetas
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="articulo">
-
-                    <div class="foto"></div>
-                    <div class="titulo">TÍTULO DEL ARTÍCULO</div>
-                    <div class="texto">
-                        texto noticia texto noticia
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                        texto noticia texto noticia 
-                    </div>
-                    <div class="leer">
-                        <a href="#">
-							<p>Leer Más</p>
-						</a>
-                    </div>
-                    <div class="datos">
-
-                        <div class="fecha">
-                            <div class="foto"></div>
-                            <div class="numeros">
-                                01/01/99
-                            </div>
-                        </div>
-
-                        <div class="autor">
-                            <div class="foto"></div>
-                            <div class="nombre">
-                                Autor
-                            </div>
-                        </div>
-
-                        <div class="comentarios">
-                            <div class="foto"></div>
-                            <div class="cantidad">
-                                0 Comentarios
-                            </div>
-                        </div>
-
-                        <div class="etiquetas">
-                            <div class="foto"></div>
-                            <div class="nombres">
-                                Etiquetas, etiquetas
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <?php } ?>
 
             </div>
 
@@ -279,7 +136,13 @@
                         Categorías
                     </div>
 
-                    <?php while ($fila=$sql -> fetch_array()) { ?>
+                    <?php 
+
+                    $sql = $conexion->query("SELECT * FROM Categorías");
+
+                    while ($fila=$sql -> fetch_array()) { 
+
+                    ?>
 
                     <div class="nombre">
                         <div class="foto"></div>
@@ -298,41 +161,29 @@
                         Posts Populares
                     </div>
 
+                    <?php 
+
+                    $sql = $conexion->query("SELECT * FROM Posts");
+
+                    while ($fila=$sql -> fetch_array()) { 
+
+                    ?>
+
                     <div class="post">
-                        <div class="foto"></div>
+                        <div class="foto">
+                            <img src="img/<?php echo $fila[1]; ?>" width="100%" height="100%">
+                        </div>
                             <div class="nombre">
                                 <a href="#">
-                                    Nombre del post Nombre del post Nombre del post
+                                    <?php echo $fila[2]; ?>
                                 </a>
                             </div>
                             <div class="fecha">
-                                Escrito el 01/01/99
+                                Escrito el <?php echo $fila[5]; ?>
                             </div>
                     </div>
 
-                    <div class="post">
-                        <div class="foto"></div>
-                            <div class="nombre">
-                                <a href="#">
-                                    Nombre del post Nombre del post Nombre del post
-                                </a>
-                            </div>
-                            <div class="fecha">
-                                Escrito el 01/01/99
-                            </div>
-                    </div>
-
-                    <div class="post">
-                        <div class="foto"></div>
-                            <div class="nombre">
-                                <a href="#">
-                                    Nombre del post Nombre del post Nombre del post
-                                </a>
-                            </div>
-                            <div class="fecha">
-                                Escrito el 01/01/99
-                            </div>
-                    </div>
+                <?php } ?>
 
                 </div>
 
@@ -342,53 +193,27 @@
                         Más Info
                     </div>
 
-                    <div class="post">
-                        <div class="foto"></div>
-                        <div class="nombre">
-                            <a href="#">
-                                Comentario Comentario Comentario 
-                            </a>
-                        </div>
-                        <div class="nombre-post">
-                            Escrito en "Nombre Post Nombre Post"
-                        </div>
-                    </div>
+                    <?php 
+
+                    $sql = $conexion->query("SELECT * FROM Comentarios JOIN Posts ON Comentarios.Codigo_Post=Posts.Codigo_Post");
+
+                    while ($fila=$sql -> fetch_array()) { 
+
+                    ?>
 
                     <div class="post">
                         <div class="foto"></div>
                         <div class="nombre">
                             <a href="#">
-                                Comentario Comentario Comentario 
+                                <?php echo $fila[1]; ?>
                             </a>
                         </div>
                         <div class="nombre-post">
-                            Escrito en "Nombre Post Nombre Post"
+                            Escrito en "<?php echo $fila[6]; ?>"
                         </div>
                     </div>
 
-                    <div class="post">
-                        <div class="foto"></div>
-                        <div class="nombre">
-                            <a href="#">
-                                Comentario Comentario Comentario 
-                            </a>
-                        </div>
-                        <div class="nombre-post">
-                            Escrito en "Nombre Post Nombre Post"
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <div class="foto"></div>
-                        <div class="nombre">
-                            <a href="#">
-                                Comentario Comentario Comentario 
-                            </a>
-                        </div>
-                        <div class="nombre-post">
-                            Escrito en "Nombre Post Nombre Post"
-                        </div>
-                    </div>
+                    <?php } ?>
 
                 </div>
 

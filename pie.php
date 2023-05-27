@@ -66,13 +66,13 @@
         <div class="menu_inferior">
             <ul>
                 <li>
-                    <a href="#">Consolas</a>
+                    <a href="https://www.game.es/buscar/CONSOLAS">Consolas</a>
                 </li>
                 <li>
-                    <a href="#">Juegos</a>
+                    <a href="https://www.game.es/VIDEOJUEGOS">Juegos</a>
                 </li>
                 <li>
-                    <a href="#">Portables</a>
+                    <a href="https://computerhoy.com/reportajes/mejores-consolas-portatiles-ofertas-descuentos-915015">Portables</a>
                 </li>
                 <li>
                     <a href="blog.php">Blog</a>
