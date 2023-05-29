@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+body {
+	background-color: rgb(10, 15, 25);
+	color: white;
+	font-family: 'Oswald';
+}
+
+ul#menu_principal {
+	/*border: 1px solid yellow;*/
+	
+	list-style: none;
+	margin: 30px;
+}
+
+div.menu {
+	/*border: 1px solid green;*/
+	width: 590px;	/* Cambiar a 580px al quitar los bordes */
+	height: 55px;
+}
+
+/* Ocultar los submenús */
+div.panel {
+	display: none;
+}
+
+/* Hacer que los objetos del menú principal sean rectángulos en el menú */
+ul#menu_principal > li {
+	/*border: 1px solid blue;*/
+
+	background-color: rgb(20, 40, 40);
+	width: 96px;	
+	height: 55px;
+
+	float: left;
+}
+
+/* Redondear los bordes de izquierda y derecha del menú */
+ul#menu_principal > li:nth-child(1) {
+	border-radius: 10px 0px 0px 10px;
+}
+
+ul#menu_principal > li:nth-child(5) {
+	border-radius: 0px 10px 10px 0px;
+}
+
+/* Poner bordes entre los li's */
+ul#menu_principal > li:nth-child(2),
+ul#menu_principal > li:nth-child(4) {
+	border-left: 1px solid lawngreen;
+	border-right: 1px solid lawngreen;
+	
+}
+
+/* Al pasar por encima de los li's del menú principal,
+se cambia el color de fondo */
+ul#menu_principal > li:hover {
+	background-color: #d8450b;
+}
+
+/* Al pasar por encima de los li's, se muestran los submenús */
+li:hover > div.panel {
+	display: block;
+}
+
+/* Posicionar los li's del menú y submenús para los z-index */
+ul#menu_principal > li,
+ul.submenu > li {
+	position: relative;
+}
+
+/* Cambiar el color de los enlaces */
+ul#menu_principal > li > a > span {
+	color: lawngreen;
+}
+
+/* Al pasar por encima, cambiar el color de los enlaces del menú principal */
+ul#menu_principal > li:hover > a > span {
+	color: white;
+}
+
+ul.submenu {
+	position: absolute;
+	top: 55px;
+}
+
+/* Hacer que los objetos del submenú sean rectángulos en el menú */
+ul.submenu > li {
+	/*border: 1px solid green;*/
+	background-color: rgb(0, 50, 150);
+
+	width: 96px;	
+	height: 55px;
+
+	float: left;
+
+	border-radius: 5px;
+
+	z-index: 1;
+}
+
+/* Al pasar por encima, cambiar el color de los li's del submenú */
+ul.submenu > li:hover {
+	background-color: rgb(0, 204, 255);
+}
+
+/* Hacer que los enlaces ocupen todo el li */
+ul#menu_principal > li > a {
+	/*border: 1px solid yellow;*/
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Hacer que los enlaces ocupen todo el li */
+ul.submenu > li > a {
+	/*border: 1px solid yellow;*/
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Cambiar el color de los enlaces del submenú */
+ul.submenu > li > a > span {
+	color: rgb(0, 204, 255);
+}
+
+/* Al pasar por encima, cambiar el color de los textos del submenú */
+ul.submenu > li:hover > a > span {
+	color: white;
+}
+
+/* Cambiar el estilo de los enlaces */
+ul#menu_principal a {
+	text-decoration: none;
+}
+
+/* Mover los textos de los li's al medio */
+ul#menu_principal span {
+	/*border: 1px solid red;*/
+
+	font-family: 'Oswald', sans-serif;
+	position: relative;
+	top: 19px;
+	left: 10px;
+}

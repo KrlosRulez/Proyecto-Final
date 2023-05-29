@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+div#contenedor table {
+	width: 400px;	
+}
+
+table tr > td:nth-child(1) {
+	text-decoration: underline;
+}

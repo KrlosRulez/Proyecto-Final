@@ -1,0 +1,164 @@
+div#contenido {
+    border: 1px solid green;
+
+    position: relative;
+}
+
+/* Textos */
+div#contenido > div.textos {
+    border: 1px solid blue;
+
+    width: 750px;
+    margin: 10px;
+}
+
+div.textos > div {
+    font-family: 'Oswald';
+    padding: 10px;
+}
+
+div.textos > div.titulo {
+    border: 1px solid purple;
+
+    font-size: 40px;
+}
+
+div.textos > div.descripcion {
+    border: 1px solid green;
+}
+
+div.textos > div.advertencia {
+    border: 1px solid red;
+
+    border-radius: 10px;
+
+    background-color: darkslategrey;
+    color: lightgrey;
+}
+
+/* Formulario */
+div#contenido > div.formulario {
+    border: 1px solid blue;
+
+    width: 750px;
+    height: 370px;
+    margin: 10px;
+}
+
+div.formulario > form > div {
+    /*border: 1px solid gold;*/
+
+    padding: 12px 12px 12px 0px;
+    margin: 10px;
+}
+
+div.formulario > form > div > div,
+div.formulario > form > div > input {
+    float: left;
+}
+
+div.formulario > form > div > input {
+    width: 300px;
+    margin-left: 5px;
+}
+
+div.formulario > form > div.botonenviar > input {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    color: white;
+}
+
+div.formulario > form > div.botonenviar > input:hover {
+    box-shadow: 0px 0px 10px rgb(170, 255, 0);
+}
+
+div.formulario > form > div > textarea {
+    width: 500px;
+    height: 150px;
+}
+
+div.formulario > form > div > div.foto {
+    /*border: 1px solid yellow;*/
+
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/glyphicons-halflings-white.png);
+    background-repeat: no-repeat;
+}
+
+div.formulario > form > div.nombre > div.foto {
+    background-position: -168px 2px;
+}
+
+div.formulario > form > div.email > div.foto {
+    background-position: -72px 2px;
+}
+
+div.formulario > form > div.web > div.foto {
+    background-position: -336px -142px;
+}
+
+/* Información Derecha */
+div#contenido > div.info {
+    border: 1px solid pink;
+
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+    height: 530px;
+
+    position: absolute;
+    top: 0px;
+    left: 770px;
+}
+
+div.info > div.datos {
+    border: 1px solid red;
+}
+
+div.info > div.datos > div.titulo {
+    border-top: 1px dashed yellow;
+    border-bottom: 1px dashed yellow;
+
+    padding: 10px;
+    font-family: 'Oswald';
+    font-size: 20px;
+}
+
+div.info > div.datos > div.texto {
+    /*border: 1px solid blue;*/
+
+    padding: 10px 0px 10px 0px;
+    font-family: 'Oswald';
+    line-height: 25px;
+}
+
+div.info > div.datos > div.texto > span {
+    color: #d8450b;
+}
+
+div.info > div.mapa {
+    border: 1px solid green;
+
+    margin-top: 10px;
+    height: 280px;
+}
+
+div.info > div.mapa > div.titulo {
+    border-top: 1px dashed yellow;
+    border-bottom: 1px dashed yellow;
+
+    padding: 10px;
+    font-family: 'Oswald';
+    font-size: 20px;
+}
+
+div.info > div.mapa > div.dibujo {
+    border: 1px solid purple;
+
+    height: 237px;
+}

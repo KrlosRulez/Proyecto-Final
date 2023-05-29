@@ -1,0 +1,391 @@
+/* <galeria> */
+
+/* Galería */
+div#galeria {
+	width: 1080px;
+	margin: 30px auto;
+	/*border: 1px solid purple;*/
+
+	height: 350px; /* Para ver la caja */
+}
+
+div#galeria > div#animacion {
+	float: left;
+	/*border: 1px solid red;*/
+	width: 770px;
+	height: 350px;
+}
+
+div#galeria > div#animacion > div.contenedor3d {
+	/*border: 1px solid blue;*/
+
+	width: 100%;
+	height: 100%;
+
+	position: relative;	/* Padre posicionado */
+}
+
+div.contenedor-boton {
+	/*border: 1px solid pink;*/
+	perspective: 700px;
+
+	width: 190px;
+	height: 190px;
+}
+
+div.boton {
+	/*border: 1px solid yellow;*/
+	transform-style: preserve-3d;
+
+	width: 190px;
+	height: 190px;
+
+	position: relative;
+}
+
+div.contenedor3d > div:nth-child(1) > div.boton {
+	animation: animacionboton 12s ease-in-out infinite 0.25s;
+}
+
+div.contenedor3d > div:nth-child(2) > div.boton {
+	animation: animacionboton 12s ease-in-out infinite 0.5s;
+}
+
+div.contenedor3d > div:nth-child(3) > div.boton {
+	animation: animacionboton 12s ease-in-out infinite 0.75s;
+}
+
+div.contenedor3d > div:nth-child(4) > div.boton {
+	animation: animacionboton 12s ease-in-out infinite 1s;
+}
+
+div.contenedor3d div.boton > div {
+	/*border: 1px solid blue;*/
+	/*background-color: gray;*/
+
+
+	border-radius: 100px;
+	float: left;
+	width: 190px;
+	height: 190px;
+
+	text-align: center;
+}
+
+div.contenedor3d div.boton > div:nth-child(1) {
+	/*background-color: rgba(255, 0, 0, 0.5);*/
+
+	transform: translateZ(95px);
+}
+
+div.contenedor3d div.boton > div:nth-child(2) {
+	/*background-color: rgba(0, 255, 0, 0.5);*/
+
+	transform: rotateY(90deg) translateZ(95px);
+
+	position: absolute;
+}
+
+div.contenedor3d div.boton > div:nth-child(3) {
+	/*background-color: rgba(0, 0, 255, 0.5);*/
+
+	transform: rotateY(180deg) translateZ(95px);
+
+	position: absolute;
+}
+
+div.contenedor3d div.boton > div:nth-child(4) {
+	/*background-color: rgba(255, 0, 255, 0.5);*/
+
+	transform: rotateY(270deg) translateZ(95px);
+
+	position: absolute;
+}
+
+/* Cambiar de sitio los botones */
+div.contenedor3d > div {
+	position: absolute;
+}
+
+div.contenedor3d > div:nth-child(1) {
+	left: -20px;
+	top: -20px;
+}
+
+div.contenedor3d > div:nth-child(2) {
+	left: 180px;
+	top: 200px;
+}
+
+div.contenedor3d > div:nth-child(3) {
+	left: 360px;
+	top: -20px;
+}
+
+div.contenedor3d > div:nth-child(4) {
+	left: 540px;
+	top: 200px;
+}
+
+div.contenedor3d > div > div > div {
+	background-repeat: no-repeat;
+	backface-visibility: hidden;
+}
+
+/* Imágenes de los botones */
+/* <boton 1> */
+div.contenedor3d > div:nth-child(1) > div > div:nth-child(1) {
+	background-image: url(../img/boton_cuadrado.png);
+	background-size: 100%;
+}
+div.contenedor3d > div:nth-child(1) > div > div:nth-child(2) {
+	background-image: url(../img/imagen-juego-1.jpg);
+	background-size: 200%;
+	background-position: -92px 0px;
+}
+div.contenedor3d > div:nth-child(1) > div > div:nth-child(3) {
+	background-image: url(../img/boton_X.png);
+	background-size: 120%;
+	background-position: -20px 0px;
+}
+div.contenedor3d > div:nth-child(1) > div > div:nth-child(4) {
+	background-image: url(../img/imagen-consola-1.jpg);
+	background-size: 220%;
+	background-position: -200px 0px;
+}
+/* </boton 1> */
+/* <boton 2> */
+div.contenedor3d > div:nth-child(2) > div > div:nth-child(1) {
+	background-image: url(../img/boton_equis.png);
+	background-size: 100%;
+}
+div.contenedor3d > div:nth-child(2) > div > div:nth-child(2) {
+	background-image: url(../img/imagen-juego-2.jpg);
+	background-size: 100%;
+	background-position: 0px -55px;
+}
+div.contenedor3d > div:nth-child(2) > div > div:nth-child(3) {
+	background-image: url(../img/boton_A.png);
+	background-size: 100%;
+}
+div.contenedor3d > div:nth-child(2) > div > div:nth-child(4) {
+	background-image: url(../img/imagen-consola-2.jpg);
+	background-size: 200%;
+	background-position: -70px -10px;
+}
+/* </boton 2> */
+/* <boton 3> */
+div.contenedor3d > div:nth-child(3) > div > div:nth-child(1) {
+	background-image: url(../img/boton_triangulo.png);
+	background-size: 100%;
+}
+div.contenedor3d > div:nth-child(3) > div > div:nth-child(2) {
+	background-image: url(../img/imagen-consola-3.jpg);
+	background-size: 240%;
+	background-position: -80px 0px;
+}
+div.contenedor3d > div:nth-child(3) > div > div:nth-child(3) {
+	background-image: url(../img/boton_Y.png);
+	background-size: 100%;
+}
+div.contenedor3d > div:nth-child(3) > div > div:nth-child(4) {
+	background-image: url(../img/imagen-juego-3.jpg);
+	background-size: 100%;
+	background-position: 0px -40px;
+}
+/* </boton 3> */
+/* <boton 4> */
+div.contenedor3d > div:nth-child(4) > div > div:nth-child(1) {
+	background-image: url(../img/boton_circulo.png);
+	background-size: 100%;
+}
+div.contenedor3d > div:nth-child(4) > div > div:nth-child(2) {
+	background-image: url(../img/imagen-consola-4.jpg);
+	background-size: 150%;
+	background-position: 0px -60px;
+}
+div.contenedor3d > div:nth-child(4) > div > div:nth-child(3) {
+	background-image: url(../img/boton_B.png);
+	background-size: 100%;
+}
+div.contenedor3d > div:nth-child(4) > div > div:nth-child(4) {
+	background-image: url(../img/imagen-juego-4.jpg);
+	background-size: 110%;
+	background-position: -10px -10px;
+}
+/* </boton 4> */
+
+@keyframes animacionboton {	/* Animación Botón */
+
+0% {
+	transform: rotateY(0deg);
+}
+
+25% {
+	transform: rotateY(-90deg);
+}
+
+50% {
+	transform: rotateY(-180deg);
+}
+
+75% {
+	transform: rotateY(-270deg);
+}
+
+100% {
+	transform: rotateY(-360deg);
+}
+
+}
+
+/* Noticia */
+div#galeria > div.noticia {
+	float: right;
+	/*border: 1px solid red;*/
+	width: 300px;
+	height: 350px;
+}
+
+div#galeria > div.noticia > div {
+	font-family: 'Oswald';
+}
+
+div#galeria > div.noticia > div.titulo_noticia {
+	border: 1px solid yellow;
+
+	margin: 10px;
+	width: 320px;
+	font-size: 40px;
+}
+
+div#galeria > div.noticia > div.descripcion_noticia {
+	border: 1px solid green;
+
+	margin: 10px;
+	width: 320px;
+	font-size: 18px;
+	font-style: italic;
+	color: lightgray;
+}
+
+div#galeria > div.noticia > div.parrafo_noticia {
+	border: 1px solid blue;
+
+	margin: 10px;
+	width: 320px;
+	font-size: 14px;
+}
+
+/* </galeria> */
+
+/* <contenido> */
+
+div#contenido {
+    position: relative;
+    left: 4px;
+
+	width: 1088px;
+	margin: 30px auto;
+	/*border: 1px solid green;*/
+}
+
+div#contenido > ul > li.noticia {
+	float: left;
+	border: 2px dotted lawngreen;
+	width: 248px;
+	height: 275px;
+	margin: 10px;
+	font-family: 'Oswald';
+
+	position: relative;
+}
+
+li.noticia > div.imagen {
+	/*border: 1px solid black;*/
+	background-image: url("https://picsum.photos/248/220/?random=1");
+	width: 248px;
+	height: 220px;
+}
+
+li.noticia > div.texto {
+	/*border: 1px solid black;*/
+	background-color: yellow;
+	width: 248px;
+	height: 55px;
+}
+
+div.imagen > div > a {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+}
+
+li.noticia > div.imagen > div.lupa,
+li.noticia > div.imagen > div.detalles_foto {
+	/*border: 1px solid blue;*/
+
+	width: 42px;
+	height: 42px;
+
+	position: absolute;
+
+	background-color: white;
+
+	display: none;
+}
+
+li.noticia > div.imagen > div.lupa:hover {
+	background-color: orangered;
+}
+
+li.noticia > div.imagen > div.detalles_foto:hover {
+	background-color: orangered;
+}
+
+li.noticia > div.imagen:hover > div.lupa,
+li.noticia > div.imagen:hover > div.detalles_foto {
+	display: block;
+}
+
+li.noticia > div.imagen > div.lupa {
+	top: 178px;
+	left: 156px;
+
+	background-image: url(../img/gallery-item-icons.png);
+}
+
+li.noticia > div.imagen > div.detalles_foto {
+	top: 178px;
+	left: 206px;
+
+	background-image: url(../img/gallery-item-icons.png);
+	background-position: -42px 0px;
+}
+
+li.noticia > div.texto > span.titulo_foto {
+	/*border: 1px solid red;*/
+
+	display: block;
+	font-size: 20px;
+
+	color: black;
+}
+
+li.noticia > div.texto > span.texto_foto {
+	/*border: 1px solid red;*/
+
+	display: block;
+	margin-top: 5px;
+
+	font-style: oblique;
+
+	color: black;
+}
+
+/* </contenido> */
+
+div#contenedor {
+	height: 1490px;
+}

@@ -1,0 +1,399 @@
+div#contenido {
+    border: 1px solid yellow;
+}
+
+/* <bloque principal> */
+div#contenido > div#bloque-principal {
+    border: 1px solid blue;
+    float: left;
+
+    width: 732px;
+    height: 1380px; /* Quitar luego */
+}
+
+div#bloque-principal > div.articulo {
+    border: 1px solid red;
+
+    width: 712px;
+    height: 205px;
+    padding: 10px;
+}
+
+div.articulo > div {
+    float: left;
+}
+
+div.articulo > div.foto {
+    border: 1px solid green;
+
+    width: 240px;
+    height: 200px;
+
+    background-image: url("https://picsum.photos/240/200/?random=2");
+}
+
+div.articulo > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+
+    width: 448px;
+    padding: 10px;
+
+    font-size: 30px;
+    font-family: 'Oswald';
+
+}
+
+div.articulo > div.texto {
+    border: 1px solid blue;
+
+    width: 448px;
+    margin: 10px;
+}
+
+div.articulo > div.leer {
+    border: 1px solid white;
+
+    width: 70px;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div.articulo > div.leer > a {
+    color: white;
+    width: 100%;
+    height: 100%;    
+}
+
+div.articulo > div.leer > a:hover {
+    color: #d8450b;
+}
+
+div.articulo > div.datos {
+    /*border: 1px solid yellow;*/
+
+    width: 448px;
+    margin-left: 10px;
+
+    font-family: 'Oswald';
+}
+
+div.articulo > div.datos > div {
+    float: left;
+}
+
+div.datos > div > div {
+    float: left;
+}
+
+div.datos div.foto {
+    /*border: 1px solid blue;*/
+
+    width: 15px;
+    height: 15px;
+    margin-left: 8px;
+
+    background-image: url(../img/glyphicons-halflings-white.png);
+    background-repeat: no-repeat;
+}
+
+div.datos > div.fecha > div.foto {
+    margin-left: 0px;
+}
+
+div.datos > div > div:nth-child(2) {
+    /*border: 1px solid pink;*/
+
+    color: #d8450b;
+    margin-left: 4px;
+}
+
+div.datos > div.fecha > div.numeros {
+    padding-top: 1px;
+    color: white;
+}
+
+div.fecha > div.foto {
+    background-position: -191px -118px;
+}
+
+div.autor > div.foto {
+    background-position: -167px 2px;
+}
+
+div.comentarios > div.foto {
+    background-position: -239px -118px;
+}
+
+div.etiquetas > div.foto {
+    background-position: -24px -46px;
+}
+
+/* </bloque principal> */
+
+/* <bloque secundario> */
+div#contenido > div#bloque-secundario {
+    border: 1px solid yellow;
+    float: right;
+
+    width: 432px;
+    height: 1380px; /* Quitar luego */
+}
+
+/* Barra de búsquedas */
+div#bloque-secundario > div.barra {
+    /*border: 1px solid red;*/
+
+    width: 350px;
+    height: 25px;
+
+    margin: 10px;
+
+    position: relative;
+}
+
+div#bloque-secundario > div.barra > form > p > input {
+    float: left;
+    display: block;
+}
+
+div.barra > form > p > input:nth-child(1) {
+    width: 295px;
+    height: 25px;
+}
+
+div.barra > form > p > input:nth-child(2) {
+    width: 55px;
+    height: 23px;
+    margin-top: 1px;
+    border-radius: 2px;
+}
+
+/* Categorías */
+div#bloque-secundario > div.categorias {
+    border: 1px solid green;
+
+    width: 400px;
+    height: 210px;
+
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+div#bloque-secundario > div.categorias > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+    
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+
+div#bloque-secundario > div.categorias > div.nombre {
+    border-bottom: 1px dashed blue;
+
+    height: 18px; /* Quitar luego */
+    padding: 10px;
+    font-family: 'Oswald';
+}
+
+div.categorias > div.nombre div {
+    float: left;
+}
+
+div.categorias > div.nombre > div.foto {
+    /*border: 1px solid green;*/
+
+    margin-top: 1px;
+    width: 15px;
+    height: 15px;
+
+    background-image: url(../img/glyphicons-halflings-white.png);
+    background-repeat: no-repeat;
+    background-position: 1px -96px;
+}
+
+div.categorias > div.nombre > div.categoria {
+    /*border: 1px solid pink;*/
+
+    margin-left: 8px;
+}
+
+div.categorias > div.nombre > div.categoria > a {
+    /*border: 1px solid yellow;*/
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+}
+
+div.categorias > div.nombre > div.categoria > a:hover {
+    color: #d8450b;
+}
+
+/* Posts */
+div#bloque-secundario > div.posts {
+    border: 1px solid blue;
+
+    width: 400px;
+    height: 320px;
+
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+div.posts > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+    
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+
+div.posts > div.post {
+    border: 1px solid yellow;
+
+    height: 65px; /* Quitar luego */
+    padding: 10px;
+
+    position: relative;
+}
+
+div.posts > div.post > div {
+    float: left;
+}
+
+div.posts > div.post > div.foto {
+    border: 1px solid white;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("https://picsum.photos/60/60/?random=3");
+}
+
+div.posts > div.post > div.nombre {
+    border: 1px solid red;
+
+    width: 300px;
+    font-family: 'Oswald';
+    margin-left: 10px;
+}
+
+div.posts > div.post > div.nombre > a {
+    color: white;
+}
+
+div.posts > div.post > div.nombre > a:hover {
+    color: #d8450b;
+}
+
+div.posts > div.post > div.fecha {
+    border: 1px solid blue;
+
+    margin-top: 10px;
+    margin-left: 10px;
+
+    position: absolute;
+    top: 40px;
+    left: 72px;
+
+    font-family: 'Oswald';
+    font-style: italic;
+}
+
+/* Comentarios */
+div#bloque-secundario > div.comentarios {
+    border: 1px solid green;
+
+    width: 400px;
+    height: 320px;
+
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+div.comentarios > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+    
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+
+div.comentarios > div.post {
+    border: 1px solid blue;
+
+    padding: 10px;
+    height: 40px; /* Quitar Luego */
+}
+
+div.comentarios > div.post > div {
+    float: left;
+}
+
+div.comentarios > div.post > div.foto {
+    border: 1px solid red;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url(../img/glyphicons-halflings-white.png);
+    background-repeat: no-repeat;
+    background-position: -239px -120px;
+}
+
+div.comentarios > div.post > div.nombre {
+    border: 1px solid pink;
+
+    margin-left: 8px;
+}
+
+div.comentarios > div.post > div.nombre > a {
+    color: white;
+}
+
+div.comentarios > div.post > div.nombre > a:hover {
+    color: #d8450b;
+}
+
+div.comentarios > div.post > div.nombre-post {
+    border: 1px solid orange;
+
+    margin-top: 10px;
+}
+
+/* Video */
+div#bloque-secundario > div.video {
+    border: 1px solid yellow;
+
+    width: 400px;
+    height: 320px;
+
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+div.video > div.titulo {
+    border-top: 1px dotted yellow;
+    border-bottom: 1px dotted yellow;
+    
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+
+div.video > div.widget {
+    border: 1px solid red;
+
+    margin: 10px;
+    width: 378px;
+    height: 245px;
+}
+/* </bloque secundario> */
