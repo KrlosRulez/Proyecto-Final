@@ -2,6 +2,8 @@
 
 	include ("conexion.php"); 
 
+    $cod_post = $_GET['Post'];
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +23,7 @@
 	<link rel="stylesheet" href="css/pie.css">
 
 	<link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/comentarios.css">
 
 	<!-- Favicons ================================================== -->
 	<link rel="shortcut icon" href="img/favicon.ico">
@@ -40,13 +43,8 @@
             <div id="bloque-principal">
 
             <?php 
-            // Si se ha elegido filtrar por categorías
-            if (isset($_GET['categoria'])) {
-                $categoria = $_GET['categoria'];
-                $sql = $conexion->query("SELECT * FROM Posts JOIN Categorías ON Posts.Categoria=Categorías.Codigo_Categoria WHERE Posts.Categoria = $categoria");
-            } else {
-                $sql = $conexion->query("SELECT * FROM Posts JOIN Categorías ON Posts.Categoria=Categorías.Codigo_Categoria");
-            }
+
+            $sql = $conexion->query("SELECT * FROM Posts JOIN Categorías ON Posts.Categoria=Categorías.Codigo_Categoria WHERE Codigo_Post = $cod_post");
 
             while ($fila=$sql -> fetch_array()) { 
             
@@ -61,11 +59,7 @@
                     <div class="texto">
                         <?php echo $fila[4]; ?>
                     </div>
-                    <div class="leer">
-                        <a href="comentarios.php?Post=<?php echo $fila[0]; ?>">
-							<p>Leer Más</p>
-						</a>
-                    </div>
+
                     <div class="datos">
 
                         <div class="fecha">
@@ -120,6 +114,66 @@
                 </div>
 
                 <?php } ?>
+
+                <div class="comentarios">
+
+                    <div class="titulo">
+                        Comentarios
+                    </div>
+
+                    <?php 
+                    
+                    $sql = $conexion->query("SELECT * FROM Comentarios WHERE Codigo_Post = $cod_post  ORDER BY Fecha DESC");
+
+                    while ($fila=$sql -> fetch_array()) {  
+
+                    ?>
+
+                    <div class="comentario">
+
+                        <div class="foto">
+                            <img src="img/<?php echo $fila[5]; ?>" width="100%" height="100%"/>
+                        </div>
+
+                        <div class="texto">
+                            <?php echo $fila[1]; ?>
+                        </div>
+
+                        <div class="datos">
+
+                            <div class="usuario">
+
+                                <div class="foto"></div>
+
+                                <div class="nombre">
+                                    <?php echo $fila[4]; ?>
+                                </div>
+
+                            </div>
+
+                            <div class="fecha">
+
+                                <div class="foto"></div>
+
+                                <div class="numeros">
+                                    <?php 
+
+                                    $fecha_mysql = $fila[2];
+                                    $fecha = strtotime($fecha_mysql);
+                                    echo date("d-m-Y", $fecha);  
+                                    
+                                    ?>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <?php } ?>
+
+                </div>
 
             </div>
 
@@ -240,7 +294,7 @@
                     <div class="titulo">Video Widget</div>
 
                     <div class="widget">
-                        <iframe width="377" height="245" src="https://www.youtube.com/embed/1INU3FOJsTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="378" height="245" src="https://www.youtube.com/embed/1INU3FOJsTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
 
                 </div>

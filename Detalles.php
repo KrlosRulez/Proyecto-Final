@@ -3,8 +3,6 @@
 
 	$cod_noticia = $_GET['Noticia'];
 
-	$sql = $conexion->query("SELECT * FROM Juegos WHERE Codigo_Juego = $cod_noticia");
-
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +38,13 @@
 
         <div id="contenido-foto">
 
-		<?php while ($fila=$sql -> fetch_array()) { ?>
+		<?php 
+		
+		$sql = $conexion->query("SELECT * FROM Juegos WHERE Codigo_Juego = $cod_noticia");
+
+		while ($fila=$sql -> fetch_array()) { 
+			
+		?>
 
             <div class="foto">
 				<img src="img/<?php echo $fila[1]; ?>" width="100%" height="100%">
@@ -66,7 +70,14 @@
 						GÉNERO: <?php echo $fila[7]; ?>
 					</div>
 					<div class="fecha">
-						FECHA DE LANZAMIENTO: <?php echo $fila[8]; ?>
+						FECHA DE LANZAMIENTO: 
+						<?php 
+						
+						$fecha_mysql = $fila[8];
+						$fecha = strtotime($fecha_mysql);
+						echo date("d-m-Y", $fecha); 
+						
+						?>
 					</div>
 					<div class="estudio">
 						ESTUDIO: <?php echo $fila[9]; ?>

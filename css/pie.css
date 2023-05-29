@@ -54,11 +54,35 @@ div#pie > div.mapa {
 	height: 200px;
 }
 
+/* Posts */
 div#pie > div.posts {
 	left: 90px;
 
 	width: 240px;
 	height: 200px;
+}
+
+div#pie > div.posts > div.titulo {
+    border-top: 1px dotted lawngreen;
+	border-bottom: 1px dotted lawngreen;
+    font-family: 'Oswald';
+    padding: 5px;
+	font-size: 25px;
+}
+
+div#pie > div.posts > div.nombre-post {
+    border-bottom: 1px dashed yellow;
+
+    padding: 10px 5px;
+    font-family: 'Oswald';
+}
+
+div#pie > div.posts > div.nombre-post > a {
+	color: white;
+}
+
+div#pie > div.posts > div.nombre-post > a:hover {
+	color: #d8450b;
 }
 
 div#pie > div.galeria {

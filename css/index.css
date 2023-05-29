@@ -277,13 +277,49 @@ div#galeria > div.noticia > div.parrafo_noticia {
 	font-size: 14px;
 }
 
+div#galeria > div.noticia > div.boton-mas {
+	/*border: 1px solid yellow;*/
+
+	margin: 10px;
+}
+
+div.boton-mas > div {
+    float: left;
+}
+
+div.boton-mas > div.foto {
+	/*border: 1px solid red;*/
+
+	margin-top: 1.5px;
+	width: 15px;
+    height: 15px;
+
+    background-image: url(../img/glyphicons-halflings-white.png);
+    background-repeat: no-repeat;
+    background-position: 1px -96px;
+}
+
+div.boton-mas > div.texto {
+	/*border: 1px solid pink;*/
+
+	font-family: 'Oswald';
+	margin-left: 8px;
+}
+
+div.boton-mas > div.texto > a {
+	color: white;
+}
+
+div.boton-mas > div.texto > a:hover {
+	color: #d8450b;
+}
+
 /* </galeria> */
 
 /* <contenido> */
 
 div#contenido {
     position: relative;
-    left: 4px;
 
 	overflow: hidden;
 	width: 1088px;

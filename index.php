@@ -1,7 +1,7 @@
 <?php
 	include("conexion.php");
 
-	$sql = $conexion->query("SELECT * FROM Noticias");
+	
 ?>
 
 <!DOCTYPE html>
@@ -88,34 +88,40 @@
 
 			<div class="noticia">
 
+				<?php 
+				// Cambiar para Buscar la noticia con más visitas o algo
+				$sql = $conexion->query("SELECT * FROM Juegos WHERE Codigo_Juego = 1");
+				
+				while ($fila=$sql -> fetch_array()) { 
+					
+				?>
+
 				<div class="titulo_noticia">
-					Título de la Noticia
+					<?php echo $fila[2]; ?>
 				</div>
 
 				<div class="descripcion_noticia">
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
+					<?php echo $fila[3]; ?>
 				</div>
 
 				<div class="parrafo_noticia">
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
+					<?php echo $fila[4]; ?>
+				</div>
+
+				<div class="boton-mas">
+
+					<div class="foto"></div>
+					<div class="texto">
+						<a href="Detalles.php?Noticia=<?php echo $fila[0]; ?>">
+							Más...
+						</a>
+					</div>
+
 				</div>
 
 			</div>
+
+			<?php } ?>
 
 		</div>
 
@@ -125,7 +131,13 @@
 
 			<ul>
 
-				<?php while ($fila=$sql -> fetch_array()) { ?>
+				<?php 
+				
+				$sql = $conexion->query("SELECT * FROM Noticias");
+				
+				while ($fila=$sql -> fetch_array()) { 
+					
+				?>
 
 				<li class="noticia">
 

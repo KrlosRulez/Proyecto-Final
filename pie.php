@@ -1,3 +1,9 @@
+<?php 
+
+	include ("conexion.php"); 
+
+?>
+
 <div id="pie">
     <div class="nosotros">
         <div class="logo">
@@ -20,7 +26,24 @@
     </div>
 
     <div class="posts">
-        Posts
+        <div class="titulo">Últimos Posts</div>
+
+        <?php 
+
+		$sql = $conexion->query("SELECT * FROM Posts ORDER BY Fecha DESC");
+
+		while ($fila=$sql -> fetch_array()) { 
+        
+        ?>
+
+        <div class="nombre-post">
+            <a href="comentarios.php?Post=<?php echo $fila[0]; ?>">
+                <?php echo $fila[2]; ?>
+            </a>    
+        </div>
+
+        <?php } ?>
+
     </div>
 
     <div class="galeria">
@@ -66,13 +89,13 @@
         <div class="menu_inferior">
             <ul>
                 <li>
-                    <a href="https://www.game.es/buscar/CONSOLAS">Consolas</a>
+                    <a href="https://www.game.es/buscar/CONSOLAS" target="_blank">Consolas</a>
                 </li>
                 <li>
-                    <a href="https://www.game.es/VIDEOJUEGOS">Juegos</a>
+                    <a href="https://www.game.es/VIDEOJUEGOS" target="_blank">Juegos</a>
                 </li>
                 <li>
-                    <a href="https://computerhoy.com/reportajes/mejores-consolas-portatiles-ofertas-descuentos-915015">Portables</a>
+                    <a href="https://computerhoy.com/reportajes/mejores-consolas-portatiles-ofertas-descuentos-915015" target="_blank">Portables</a>
                 </li>
                 <li>
                     <a href="blog.php">Blog</a>
