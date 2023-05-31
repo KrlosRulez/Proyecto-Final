@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Agregar Noticia</title>
+	<title>Agregar Comentario</title>
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,16 +18,16 @@
 <body>
 	<header>
 	<h1>BASE DE DATOS MAQUINITAS</h1>
-	<h2>TABLA DE NOTICIAS</h2>
+	<h2>TABLA DE COMENTARIOS</h2>
 	</header>
 	<nav>
 		<ul>
 			<li><a href="bbdd.jsp">Home |</a></li>
-			<li><a href="ListarNoticia.jsp">Listar Noticias </a></li>
+			<li><a href="ListarComentario.jsp">Listar Comentarios </a></li>
 		</ul>
 	</nav>
 	<div id="contenedor">
-		<center><h1>Añadir Noticia</h1></center>
+		<center><h1>Añadir Comentario</h1></center>
 		
 		<%@ page import="java.io.*,java.util.*,java.net.*,java.sql.*,com.mysql.jdbc.*,java.sql.Connection, java.sql.Statement, java.sql.PreparedStatement" %>
 		
@@ -42,18 +42,18 @@
 		ResultSet RS_Contador = null;
 		PreparedStatement PS_Ajenas = null;
 		PreparedStatement PS_Contador = null;
-		int codigo_juego = 0;
+		int codigo_post = 0;
 		
 		// Llenar el ComboBox de los códigos de juego
 		
-		String QUERY_JUEGOS = "Select Codigo_Juego from Juegos";
-		PS_Ajenas = conexion.prepareStatement(QUERY_JUEGOS);
+		String QUERY_POSTS = "Select Codigo_Post from Posts ORDER BY Codigo_Post";
+		PS_Ajenas = conexion.prepareStatement(QUERY_POSTS);
 		RS_Ajenas = PS_Ajenas.executeQuery();
 		
 		// Poner el código automático
 		
-		String QUERY_NOTICIAS = "Select Codigo_Noticia from Noticias";
-		PS_Contador = conexion.prepareStatement(QUERY_NOTICIAS);
+		String QUERY_COMENTARIOS = "Select Codigo_Comentario from Comentarios";
+		PS_Contador = conexion.prepareStatement(QUERY_COMENTARIOS);
 		RS_Contador = PS_Contador.executeQuery();
 		
 		if(request.getParameter("btnenv") != null) {
@@ -69,12 +69,13 @@
 				   codigo++;
 			}
 			
-			String imagen = request.getParameter("img-noticia");
-			String titulo = request.getParameter("titulo-noticia");
-			String descripcion = request.getParameter("descripcion-noticia");
-			int cod_juego = Integer.parseInt(request.getParameter("codigos"));
+			String texto = request.getParameter("texto-comentario");
+			String fecha = request.getParameter("fecha-comentario");
+			int cod_post = Integer.parseInt(request.getParameter("codigos"));
+			String nombre = request.getParameter("nombre-usuario");
+			String imagen = request.getParameter("imagen-usuario");
 			
-			String QUERY = "insert into Noticias (Codigo_Noticia, Imagen, Titulo_Una_Linea, Descripcion_Una_Linea, Codigo_Juego) VALUES (" + codigo + ",'" + imagen + "', '" + titulo + "','" + descripcion + "', " + cod_juego + "); ";			
+			String QUERY = "insert into Comentarios (Codigo_Comentario, Texto, Fecha, Codigo_Post, Nombre_Usuario, Imagen_Usuario) VALUES (" + codigo + ",'" + texto + "', '" + fecha + "'," + cod_post + ", '" + nombre + "', '" + imagen + "'); ";			
 			
 			System.out.println(QUERY);
 			
@@ -101,40 +102,46 @@
 		}
 		// construyendo form
 		%>
-		<form action="InsertarNoticia.jsp" method="post">
+		<form action="InsertarComentario.jsp" method="post">
 			<table border="1" align="center" class="tabla">
 				<tr>
-					<td>Imagen</td>
+					<td>Texto</td>
 					<td>
-					<input type="text" id="img-noticia" name="img-noticia" value="" maxlength="50" class="controles"/>
+					<input type="text" id="texto-comentario" name="texto-comentario" value="" maxlength="100" class="controles"/>
 					</td>
 				</tr>
 				<tr>
-					<td>Título</td>
+					<td>Fecha</td>
 					<td>
-					<input type="text" id="titulo-noticia" name="titulo-noticia" value="" maxlength="40" class="controles"/>
+					<input type="date" id="fecha-comentario" name="fecha-comentario" value="" maxlength="40" class="controles"/>
 					</td>
 				</tr>
 				<tr>
-					<td>Descripción</td>
-					<td>
-					<input type="text" id="descripcion-noticia" name="descripcion-noticia" value="" maxlength="50" class="controles"/>
-					</td>
-				</tr>
-				<tr>
-					<td>Código Juego</td>
+					<td>Código Post</td>
 					<td>
 					
 						<label for="codigos"></label>
 						<select id="codigos" name="codigos">
 							<% while (RS_Ajenas.next() == true) { 
-							   codigo_juego = RS_Ajenas.getInt("Codigo_Juego"); %>
+							   codigo_post = RS_Ajenas.getInt("Codigo_Post"); %>
 								
-							   <option value="<%=codigo_juego%>"><%=codigo_juego%></option>
+							   <option value="<%=codigo_post%>"><%=codigo_post%></option>
 								
 							<% } %>
 						</select>
 					
+					</td>
+				</tr>
+				<tr>
+					<td>Nombre Usuario</td>
+					<td>
+					<input type="text" id="nombre-usuario" name="nombre-usuario" value="" maxlength="50" class="controles"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Imagen Usuario</td>
+					<td>
+					<input type="text" id="imagen-usuario" name="imagen-usuario" value="" maxlength="50" class="controles"/>
 					</td>
 				</tr>
 				<tr>
@@ -150,7 +157,7 @@
 			
 			try{
 				conexion.close();
-				response.sendRedirect("ListarNoticia.jsp");
+				response.sendRedirect("ListarComentario.jsp");
 			} 
 			
 			catch(SQLException e) {

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Lista de Noticias</title>
+		<title>Lista de Posts</title>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,17 +18,17 @@
 	<body>
 		<header>
 			<h1>BASE DE DATOS MAQUINITAS</h1>
-			<h2>TABLA DE NOTICIAS</h2>
+			<h2>TABLA DE POSTS</h2>
 		</header>
 		<nav>
 			<ul>
 				<li><a href="bbdd.jsp">Home | </a></li>
-				<li><a href="InsertarNoticia.jsp">Añadir Noticia</a></li>
+				<li><a href="InsertarPost.jsp">Añadir Post</a></li>
 			</ul>
 		</nav>
 		
 		<div id="contenedor">
-			<center><h1> Lista De Noticias </h1></center>
+			<center><h1> Lista De Posts </h1></center>
 			<%@ page import="java.io.*,java.net.*,java.sql.*,com.mysql.jdbc.*,java.sql.Connection, java.sql.PreparedStatement" %>
 			<%
 			// objetos de enlace
@@ -39,7 +39,7 @@
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			conexion = DriverManager.getConnection(strcon);
-			String QUERY = "Select * from Noticias";
+			String QUERY = "Select * from Posts";
 			PS = conexion.prepareStatement(QUERY);
 			RS = PS.executeQuery();
 			
@@ -49,22 +49,28 @@
 				<td>Código</td>
 				<td>Imagen</td>
 				<td>Título</td>
-				<td>Descripción</td>
-				<td>Código Juego</td>
+				<td>Autor</td>
+				<td>Texto</td>
+				<td>Fecha</td>
+				<td>Categoría</td>
+				<td>Visitas</td>
 				<td colspan="2" class="vacio"></td>
 			</tr>
 			<% while(RS.next() == true){ %>
 			<tr>
-				<td><%=RS.getInt("Codigo_Noticia") %></td>
+				<td><%=RS.getInt("Codigo_Post") %></td>
 				<td><%=RS.getString("Imagen") %></td>
-				<td><%=RS.getString("Titulo_Una_Linea") %></td>
-				<td><%=RS.getString("Descripcion_Una_Linea") %></td>
-				<td><%=RS.getInt("Codigo_Juego") %></td>
+				<td><%=RS.getString("Titulo") %></td>
+				<td><%=RS.getString("Autor") %></td>
+				<td><%=RS.getString("Descripcion") %></td>
+				<td><%=RS.getString("Fecha") %></td>
+				<td><%=RS.getInt("Categoria") %></td>
+				<td><%=RS.getInt("Visitas") %></td>
 				<td>
-					<a href="ModificarNoticia.jsp?codigo_noticia=<%=RS.getInt("Codigo_Noticia") %>">Editar</a>
+					<a href="ModificarPost.jsp?codigo_post=<%=RS.getInt("Codigo_Post") %>">Editar</a>
 				</td>
 				<td>
-					<a href="BorrarNoticia.jsp?codigo_noticia=<%=RS.getInt("Codigo_Noticia") %>">Eliminar</a>
+					<a href="BorrarPost.jsp?codigo_post=<%=RS.getInt("Codigo_Post") %>">Eliminar</a>
 				</td>
 			</tr>
 			<% } %>

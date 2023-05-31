@@ -33,7 +33,7 @@
 
 		    <div id="logo">
 		        <img src="img/logo-pagina.png" height="55px" />
-		        <p><a href="../index.php">Maquinitas.com</a></p>
+		        <p><a href="https://tela.com.es/tela/Trabajo_Final/index.php">Maquinitas.com</a></p>
 		    </div>
 		
 		    <div id="menu">
@@ -112,11 +112,11 @@
 		            </li>
 		
 		            <li>
-		                <a href="../blog.php"><span>Blog</span></a>
+		                <a href="https://tela.com.es/tela/Trabajo_Final/blog.php"><span>Blog</span></a>
 		            </li>
 		
 		            <li>
-		                <a href="../Contacto.php"><span>Contacto</span></a>
+		                <a href="https://tela.com.es/tela/Trabajo_Final/Contacto.php"><span>Contacto</span></a>
 		            </li>
 		
 		            <li>
@@ -142,8 +142,8 @@
             </form>
 
 			<%
-                String Usuario = "alumno";
-                String Contraseña = "alumno1234";
+                String Usuario = "krlos";
+                String Contraseña = "betis";
                 
                 if (request.getParameter("nombre") != null && request.getParameter("pass") != null) {
                 	if (request.getParameter("nombre").equals(Usuario) &&
@@ -154,7 +154,9 @@
             <%    		
                 	} else {
             %>
-            			<p class="aviso">Usuario o Contraseña Incorrectos</p>
+            			<p class="aviso">
+            				Usuario o Contraseña Incorrectos
+            			</p>
             <%    		
                 	}
             
@@ -185,13 +187,6 @@
 		    </div>
 		
 		    <div class="posts">
-		        <div class="titulo">Últimos Posts</div>
-		
-		        <div class="nombre-post">
-		            <a href="#">
-		                Posts
-		            </a>    
-		        </div>
 		
 		    </div>
 		
@@ -247,10 +242,10 @@
 		                    <a href="https://computerhoy.com/reportajes/mejores-consolas-portatiles-ofertas-descuentos-915015" target="_blank">Portables</a>
 		                </li>
 		                <li>
-		                    <a href="../blog.php">Blog</a>
+		                    <a href="https://tela.com.es/tela/Trabajo_Final/blog.php">Blog</a>
 		                </li>
 		                <li>
-		                    <a href="../Contacto.php">Contacto</a>
+		                    <a href="https://tela.com.es/tela/Trabajo_Final/Contacto.php">Contacto</a>
 		                </li>
 		            </ul>
 		        </div>

@@ -18,17 +18,17 @@
 	<body>
 		<header>
 			<h1>BASE DE DATOS MAQUINITAS</h1>
-			<h2>TABLA DE NOTICIAS</h2>
+			<h2>TABLA DE COMENTARIOS</h2>
 		</header>
 		<nav>
 			<ul>
 				<li><a href="bbdd.jsp">Home | </a></li>
-				<li><a href="InsertarNoticia.jsp">Añadir Noticia</a></li>
+				<li><a href="InsertarComentario.jsp">Añadir Comentario</a></li>
 			</ul>
 		</nav>
 		
 		<div id="contenedor">
-			<center><h1> Lista De Noticias </h1></center>
+			<center><h1> Lista De Comentarios </h1></center>
 			<%@ page import="java.io.*,java.net.*,java.sql.*,com.mysql.jdbc.*,java.sql.Connection, java.sql.PreparedStatement" %>
 			<%
 			// objetos de enlace
@@ -39,7 +39,7 @@
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			conexion = DriverManager.getConnection(strcon);
-			String QUERY = "Select * from Noticias";
+			String QUERY = "Select * from Comentarios";
 			PS = conexion.prepareStatement(QUERY);
 			RS = PS.executeQuery();
 			
@@ -47,24 +47,26 @@
 			<table align="center" class="tabla">
 			<tr>
 				<td>Código</td>
-				<td>Imagen</td>
-				<td>Título</td>
-				<td>Descripción</td>
-				<td>Código Juego</td>
+				<td>Texto</td>
+				<td>Fecha</td>
+				<td>Código Post</td>
+				<td>Nombre Usuario</td>
+				<td>Imagen Usuario</td>
 				<td colspan="2" class="vacio"></td>
 			</tr>
 			<% while(RS.next() == true){ %>
 			<tr>
-				<td><%=RS.getInt("Codigo_Noticia") %></td>
-				<td><%=RS.getString("Imagen") %></td>
-				<td><%=RS.getString("Titulo_Una_Linea") %></td>
-				<td><%=RS.getString("Descripcion_Una_Linea") %></td>
-				<td><%=RS.getInt("Codigo_Juego") %></td>
+				<td><%=RS.getInt("Codigo_Comentario") %></td>
+				<td><%=RS.getString("Texto") %></td>
+				<td><%=RS.getString("Fecha") %></td>
+				<td><%=RS.getInt("Codigo_Post") %></td>
+				<td><%=RS.getString("Nombre_Usuario") %></td>
+				<td><%=RS.getString("Imagen_Usuario") %></td>
 				<td>
-					<a href="ModificarNoticia.jsp?codigo_noticia=<%=RS.getInt("Codigo_Noticia") %>">Editar</a>
+					<a href="ModificarComentario.jsp?codigo_comentario=<%=RS.getInt("Codigo_Comentario") %>">Editar</a>
 				</td>
 				<td>
-					<a href="BorrarNoticia.jsp?codigo_noticia=<%=RS.getInt("Codigo_Noticia") %>">Eliminar</a>
+					<a href="BorrarComentario.jsp?codigo_comentario=<%=RS.getInt("Codigo_Comentario") %>">Eliminar</a>
 				</td>
 			</tr>
 			<% } %>

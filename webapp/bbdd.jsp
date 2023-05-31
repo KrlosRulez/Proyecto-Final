@@ -15,6 +15,9 @@
 	<link rel="stylesheet" href="css/bbdd.css">
 </head>
 <body>
+	<a href="https://tela.com.es/tela/Trabajo_Final/index.php">Volver a la página</a>
+	
+	<p>Elige una tabla con la que trabajar</p>
 	
 	<div class="menu">
 		
@@ -38,34 +41,6 @@
                     </ul>
                 </div>
             </li>
-
-		    <li>
-                <span>Juegos</span>
-                <div class="panel">
-                    <ul class="submenu">
-                        <li>
-                            <a href="InsertarJuego.jsp">
-                                <span>Insertar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="ModificarJuego.jsp">
-                                <span>Modificar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="BorrarJuego.jsp">
-                                <span>Borrar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="ListarJuego.jsp">
-                                <span>Listar</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
             
             <li>
                 <span>Posts</span>
@@ -77,45 +52,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="ModificarPost.jsp">
-                                <span>Modificar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="BorrarPost.jsp">
-                                <span>Borrar</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="ListarPost.jsp">
-                                <span>Listar</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            
-            <li>
-                <span>Categorías</span>
-                <div class="panel">
-                    <ul class="submenu">
-                        <li>
-                            <a href="InsertarCategoria.jsp">
-                                <span>Insertar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="ModificarCategoria.jsp">
-                                <span>Modificar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="BorrarCategoria.jsp">
-                                <span>Borrar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="ListarCategoria.jsp">
                                 <span>Listar</span>
                             </a>
                         </li>
@@ -130,16 +67,6 @@
                         <li>
                             <a href="InsertarComentario.jsp">
                                 <span>Insertar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="ModificarComentario.jsp">
-                                <span>Modificar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="BorrarComentario.jsp">
-                                <span>Borrar</span>
                             </a>
                         </li>
                         <li>
