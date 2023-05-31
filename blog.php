@@ -112,7 +112,7 @@
                         <div class="etiquetas">
                             <div class="foto"></div>
                             <div class="nombres">
-                                <?php echo $fila[8]; ?>
+                                <?php echo $fila[9]; ?>
                             </div>
                         </div>
 
@@ -174,9 +174,13 @@
 
                     <?php 
 
-                    $sql = $conexion->query("SELECT * FROM Posts");
+                    $contador = 0;
+
+                    $sql = $conexion->query("SELECT * FROM Posts ORDER BY Visitas DESC");
 
                     while ($fila=$sql -> fetch_array()) { 
+
+                    if ($contador < 3) {
 
                     ?>
 
@@ -201,21 +205,31 @@
                             </div>
                     </div>
 
-                <?php } ?>
+                    <?php 
+                        $contador++;
+                    }
+                    
+                    } 
+                    
+                    ?>
 
                 </div>
 
                 <div class="comentarios">
 
                     <div class="titulo">
-                        Comentarios
+                        Últimos Comentarios
                     </div>
 
                     <?php 
 
-                    $sql = $conexion->query("SELECT * FROM Comentarios JOIN Posts ON Comentarios.Codigo_Post=Posts.Codigo_Post");
+                    $contador = 0;
+
+                    $sql = $conexion->query("SELECT * FROM Comentarios JOIN Posts ON Comentarios.Codigo_Post=Posts.Codigo_Post ORDER BY Comentarios.Fecha DESC");
 
                     while ($fila=$sql -> fetch_array()) { 
+
+                    if ($contador < 5) {
 
                     ?>
 
@@ -231,7 +245,13 @@
                         </div>
                     </div>
 
-                    <?php } ?>
+                    <?php 
+                        $contador++;
+                    } 
+
+                    }
+                
+                    ?>
 
                 </div>
 

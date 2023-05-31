@@ -73,6 +73,7 @@ div#pie > div.posts > div.titulo {
 div#pie > div.posts > div.nombre-post {
     border-bottom: 1px dashed yellow;
 
+	margin: 4px 0px;
     padding: 10px 5px;
     font-family: 'Oswald';
 }

@@ -120,4 +120,9 @@ div.textos > div.botones > div.volver > a {
 div.textos > div.botones > div.volver > a:hover {
     color: #d8450b;
 }
+
+div.textos > div.visitas {
+    position: absolute;
+    top: 740px;
+}
 /* </textos> */

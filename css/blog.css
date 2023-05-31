@@ -367,6 +367,7 @@ div.comentarios > div.post > div.nombre > a:hover {
 div.comentarios > div.post > div.nombre-post {
     border: 1px solid orange;
 
+    font-style: italic;
     margin-top: 10px;
     width: 375px;
 }

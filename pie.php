@@ -30,9 +30,13 @@
 
         <?php 
 
+        $contador = 0;
+
 		$sql = $conexion->query("SELECT * FROM Posts ORDER BY Fecha DESC");
 
 		while ($fila=$sql -> fetch_array()) { 
+
+        if ($contador < 4) {
         
         ?>
 
@@ -42,7 +46,12 @@
             </a>    
         </div>
 
-        <?php } ?>
+        <?php 
+            $contador++;
+        }
+
+        }   
+        ?>
 
     </div>
 
@@ -55,23 +64,23 @@
 
     <div class="social">
 
-        <a href="#">
+        <a href="https://es-es.facebook.com/">
             <div class="facebook"></div>
         </a>
 
-        <a href="#">
+        <a href="https://twitter.com/?lang=es">
             <div class="twitter"></div>
         </a>
 
-        <a href="#">
+        <a href="http://www.todobasket.es/">
             <div class="baloncesto"></div>
         </a>
 
-        <a href="#">
+        <a href="https://socialwifi.com/es/">
             <div class="wifi"></div>
         </a>
 
-        <a href="#">
+        <a href="https://ilmaistro.com/geni-crea-tu-arbol-genealogico-y-tu-red-social/">
             <div class="arbol"></div>
         </a>
 

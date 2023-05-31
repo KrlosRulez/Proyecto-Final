@@ -89,8 +89,8 @@
 			<div class="noticia">
 
 				<?php 
-				// Cambiar para Buscar la noticia con más visitas o algo
-				$sql = $conexion->query("SELECT * FROM Juegos WHERE Codigo_Juego = 1");
+				
+				$sql = $conexion->query("SELECT * FROM Juegos WHERE Visitas = (SELECT MAX(Visitas) FROM Juegos)");
 				
 				while ($fila=$sql -> fetch_array()) { 
 					
@@ -112,7 +112,7 @@
 
 					<div class="foto"></div>
 					<div class="texto">
-						<a href="Detalles.php?Noticia=<?php echo $fila[0]; ?>">
+						<a href="Detalles.php?Juego=<?php echo $fila[0]; ?>">
 							Más...
 						</a>
 					</div>
@@ -149,7 +149,7 @@
 							<a href="#"></a>
 						</div>
 						<div class="detalles_foto">
-							<a href="Detalles.php?Noticia=<?php echo $fila[0]; ?>"></a>
+							<a href="Detalles.php?Juego=<?php echo $fila[4]; ?>"></a>
 						</div>
 
 					</div>

@@ -1,7 +1,11 @@
 <?php 
 	include ("conexion.php"); 
 
-	$cod_noticia = $_GET['Noticia'];
+	$cod_juego = $_GET['Juego'];
+
+	$sql_visitas = "UPDATE Juegos SET Visitas = Visitas + 1 WHERE Codigo_Juego = $cod_juego";
+
+	$resul = $conexion->query($sql_visitas);
 
 ?>
 
@@ -40,7 +44,7 @@
 
 		<?php 
 		
-		$sql = $conexion->query("SELECT * FROM Juegos WHERE Codigo_Juego = $cod_noticia");
+		$sql = $conexion->query("SELECT * FROM Juegos WHERE Codigo_Juego = $cod_juego");
 
 		while ($fila=$sql -> fetch_array()) { 
 			
@@ -95,6 +99,9 @@
 							<p>Volver...</p>
 						</a>
 					</div>
+				</div>
+				<div class="visitas">
+					Visitas: <?php echo $fila[10]; ?>
 				</div>
             </div>
 
