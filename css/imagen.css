@@ -1,0 +1,8 @@
+div#foto {
+    border: 1px solid red;
+
+    margin: 20px auto;
+
+    width: 650px;
+    height: 650px;
+}

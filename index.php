@@ -1,8 +1,7 @@
 <?php
-include("conexion.php");
+	include("conexion.php");
 
-$sql = $conexion->query("SELECT * FROM Noticias");
-
+	
 ?>
 
 <!DOCTYPE html>
@@ -89,34 +88,40 @@ $sql = $conexion->query("SELECT * FROM Noticias");
 
 			<div class="noticia">
 
+				<?php 
+				
+				$sql = $conexion->query("SELECT * FROM Juegos WHERE Visitas = (SELECT MAX(Visitas) FROM Juegos)");
+				
+				while ($fila=$sql -> fetch_array()) { 
+					
+				?>
+
 				<div class="titulo_noticia">
-					Título de la Noticia
+					<?php echo $fila[2]; ?>
 				</div>
 
 				<div class="descripcion_noticia">
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
-					descripción noticia
+					<?php echo $fila[3]; ?>
 				</div>
 
 				<div class="parrafo_noticia">
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla
+					<?php echo $fila[4]; ?>
+				</div>
+
+				<div class="boton-mas">
+
+					<div class="foto"></div>
+					<div class="texto">
+						<a href="Detalles.php?Juego=<?php echo $fila[0]; ?>">
+							Más...
+						</a>
+					</div>
+
 				</div>
 
 			</div>
+
+			<?php } ?>
 
 		</div>
 
@@ -126,7 +131,13 @@ $sql = $conexion->query("SELECT * FROM Noticias");
 
 			<ul>
 
-				<?php while ($fila=$sql -> fetch_array()) { ?>
+				<?php 
+				
+				$sql = $conexion->query("SELECT * FROM Noticias");
+				
+				while ($fila=$sql -> fetch_array()) { 
+					
+				?>
 
 				<li class="noticia">
 
@@ -135,10 +146,10 @@ $sql = $conexion->query("SELECT * FROM Noticias");
 						<img src="img/<?php echo $fila[1]; ?>" width="100%" height="100%" />
 
 						<div class="lupa">
-							<a href="#"></a>
+							<a href="imagen.php?Noticia=<?php echo $fila[0]; ?>" target="_blank"></a>
 						</div>
 						<div class="detalles_foto">
-							<a href="Detalles.php?Noticia=<?php echo $fila[0]; ?>"></a>
+							<a href="Detalles.php?Juego=<?php echo $fila[4]; ?>"></a>
 						</div>
 
 					</div>

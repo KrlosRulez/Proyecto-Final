@@ -4,7 +4,7 @@
 
 /* <bloque principal> */
 div#contenido > div#bloque-principal {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     float: left;
 
     width: 732px;
@@ -12,11 +12,14 @@ div#contenido > div#bloque-principal {
 }
 
 div#bloque-principal > div.articulo {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
+    overflow: hidden;
     width: 712px;
-    height: 205px;
     padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: rgb(10, 20, 60);
 }
 
 div.articulo > div {
@@ -24,12 +27,12 @@ div.articulo > div {
 }
 
 div.articulo > div.foto {
-    border: 1px solid green;
+    border: 1px solid lawngreen;
 
     width: 240px;
     height: 200px;
 
-    background-image: url("https://picsum.photos/240/200/?random=2");
+    
 }
 
 div.articulo > div.titulo {
@@ -45,15 +48,16 @@ div.articulo > div.titulo {
 }
 
 div.articulo > div.texto {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 
     width: 448px;
     margin: 10px;
+
+    font-family: 'Oswald';
 }
 
 div.articulo > div.leer {
     border: 1px solid white;
-
     width: 70px;
     margin: 10px;
     padding: 3px;
@@ -64,7 +68,8 @@ div.articulo > div.leer {
 div.articulo > div.leer > a {
     color: white;
     width: 100%;
-    height: 100%;    
+    height: 100%;   
+    font-family: 'Oswald'; 
 }
 
 div.articulo > div.leer > a:hover {
@@ -82,6 +87,7 @@ div.articulo > div.datos {
 
 div.articulo > div.datos > div {
     float: left;
+    height: 20px;
 }
 
 div.datos > div > div {
@@ -106,7 +112,7 @@ div.datos > div.fecha > div.foto {
 div.datos > div > div:nth-child(2) {
     /*border: 1px solid pink;*/
 
-    color: #d8450b;
+    color: orange;
     margin-left: 4px;
 }
 
@@ -164,15 +170,15 @@ div.barra > form > p > input:nth-child(1) {
 }
 
 div.barra > form > p > input:nth-child(2) {
-    width: 55px;
-    height: 23px;
-    margin-top: 1px;
+    width: 45px;
+    height: 24px;
+    margin-top: 0.5px;
     border-radius: 2px;
 }
 
 /* Categorías */
 div#bloque-secundario > div.categorias {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 
     width: 400px;
 
@@ -235,10 +241,10 @@ div.categorias > div.nombre > div.categoria > a:hover {
 
 /* Posts */
 div#bloque-secundario > div.posts {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 
     width: 400px;
-    height: 320px;
+    
 
     margin-top: 35px;
     margin-left: 10px;
@@ -254,9 +260,9 @@ div.posts > div.titulo {
 }
 
 div.posts > div.post {
-    border: 1px solid yellow;
+    border-bottom: 1px dashed aqua;
 
-    height: 65px; /* Quitar luego */
+    overflow: hidden;
     padding: 10px;
 
     position: relative;
@@ -272,11 +278,10 @@ div.posts > div.post > div.foto {
     width: 60px;
     height: 60px;
 
-    background-image: url("https://picsum.photos/60/60/?random=3");
 }
 
 div.posts > div.post > div.nombre {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 
     width: 300px;
     font-family: 'Oswald';
@@ -285,6 +290,7 @@ div.posts > div.post > div.nombre {
 
 div.posts > div.post > div.nombre > a {
     color: white;
+    font-size: 18px;
 }
 
 div.posts > div.post > div.nombre > a:hover {
@@ -292,7 +298,7 @@ div.posts > div.post > div.nombre > a:hover {
 }
 
 div.posts > div.post > div.fecha {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 
     margin-top: 10px;
     margin-left: 10px;
@@ -307,11 +313,11 @@ div.posts > div.post > div.fecha {
 
 /* Comentarios */
 div#bloque-secundario > div.comentarios {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 
     width: 400px;
-    height: 320px;
-
+    
+    font-family: 'Oswald';
     margin-top: 35px;
     margin-left: 10px;
 }
@@ -326,10 +332,10 @@ div.comentarios > div.titulo {
 }
 
 div.comentarios > div.post {
-    border: 1px solid blue;
+    border-bottom: 1px dashed orange;
 
     padding: 10px;
-    height: 40px; /* Quitar Luego */
+    overflow: hidden;
 }
 
 div.comentarios > div.post > div {
@@ -337,7 +343,7 @@ div.comentarios > div.post > div {
 }
 
 div.comentarios > div.post > div.foto {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 
     width: 15px;
     height: 15px;
@@ -348,13 +354,14 @@ div.comentarios > div.post > div.foto {
 }
 
 div.comentarios > div.post > div.nombre {
-    border: 1px solid pink;
-
+    /*border: 1px solid pink;*/
     margin-left: 8px;
+    width: 350px;
 }
 
 div.comentarios > div.post > div.nombre > a {
     color: white;
+    font-size: 16px;
 }
 
 div.comentarios > div.post > div.nombre > a:hover {
@@ -362,14 +369,16 @@ div.comentarios > div.post > div.nombre > a:hover {
 }
 
 div.comentarios > div.post > div.nombre-post {
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
 
+    font-style: italic;
     margin-top: 10px;
+    width: 375px;
 }
 
 /* Video */
 div#bloque-secundario > div.video {
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
 
     width: 400px;
     height: 320px;
@@ -388,7 +397,7 @@ div.video > div.titulo {
 }
 
 div.video > div.widget {
-    border: 1px solid red;
+    border: 1px solid lawngreen;
 
     margin: 10px;
     width: 378px;

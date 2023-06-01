@@ -11,7 +11,7 @@ div#pie {
 div#pie > div {
 	float: left;
 	position: relative;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 
 div#pie > div.nosotros {
@@ -21,7 +21,7 @@ div#pie > div.nosotros {
 
 /* Logo */
 div.nosotros > div.logo {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 	width: 116px;
 	height: 50px;
 }
@@ -31,7 +31,7 @@ div#pie div.logo > p {
 	position: relative;
 	top: -20px;
 
-	border: 1px solid yellow;
+	/*border: 1px solid yellow;*/
 	display: inline;
 	font-size: 10px;
 	font-family: 'Indie Flower', cursive;
@@ -39,7 +39,7 @@ div#pie div.logo > p {
 
 /* Cambiar diseño de la dirección bajo el logo */
 div#pie div.direccion > p {
-	border: 1px solid pink;
+	/*border: 1px solid pink;*/
 
 	margin-top: 5px;
 	font-size: 12px;
@@ -48,12 +48,15 @@ div#pie div.direccion > p {
 }
 
 div#pie > div.mapa {
+	border: 1px solid lawngreen;
+
 	left: 70px;
 
 	width: 240px;
 	height: 200px;
 }
 
+/* Posts */
 div#pie > div.posts {
 	left: 90px;
 
@@ -61,7 +64,33 @@ div#pie > div.posts {
 	height: 200px;
 }
 
+div#pie > div.posts > div.titulo {
+    border-top: 1px dotted lawngreen;
+	border-bottom: 1px dotted lawngreen;
+    font-family: 'Oswald';
+    padding: 5px;
+	font-size: 25px;
+}
+
+div#pie > div.posts > div.nombre-post {
+    border-bottom: 1px dashed yellow;
+
+	margin: 4px 0px;
+    padding: 10px 5px;
+    font-family: 'Oswald';
+}
+
+div#pie > div.posts > div.nombre-post > a {
+	color: white;
+}
+
+div#pie > div.posts > div.nombre-post > a:hover {
+	color: #d8450b;
+}
+
 div#pie > div.galeria {
+	border: 1px solid lawngreen;
+
 	left: 110px;
 
 	width: 368px;
@@ -77,10 +106,13 @@ div#pie > div.social {
 }
 
 div#pie > div.menu {
-	top: 30px;
-
-	width: 1080px;
-	height: 30px;
+    /* border: 1px solid lawngreen; */
+	
+    border-radius: 4px;
+    top: 30px;
+    width: 1080px;
+    height: 30px;
+    background-color: rgb(10, 20, 40);
 }
 
 /* Imagenes Redes Sociales */
@@ -89,6 +121,7 @@ div.social div {
 	float: left;
 	width: 46px;
 	height: 47px;
+	margin: 1px;
 
 	background-image: url(../img/social-icons.png);
 }
@@ -135,9 +168,9 @@ div.social div.arbol:hover {
 
 /* Menú Inferior */
 div.menu > div.copyright {
-	border: 1px solid yellow;
+	/*border: 1px solid yellow;*/
 	width: 255px;
-	margin-top: 7px;
+	margin-top: 10px;
 	margin-left: 5px;
 }
 
@@ -167,7 +200,7 @@ div.menu_inferior > ul {
 }
 
 div.menu_inferior > ul > li {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 
 	font-family: 'Oswald', sans-serif;
 	text-align: center;

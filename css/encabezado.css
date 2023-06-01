@@ -1,13 +1,13 @@
 div#encabezado {
 	margin: 30px auto;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	height: 55px;
 	width: 1080px;
 }
 
 div#encabezado > div#logo {
 	float: left;
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 	width: 470px;
 	height: 55px;
 }
@@ -23,7 +23,11 @@ div#encabezado > div#logo > p {
 	font-family: 'Indie Flower', cursive;
 }
 
-div#encabezado > div#logo > p:hover {
+div#encabezado > div#logo > p > a {
+	color: white;
+}
+
+div#encabezado > div#logo > p > a:hover {
 	text-shadow: 0px 0px 10px rgba(208, 255, 0, 1);
 	color: lawngreen;
 }
@@ -31,7 +35,7 @@ div#encabezado > div#logo > p:hover {
 div#encabezado > div#menu {
 	float: right;
 	/*border: 1px solid green;*/
-	width: 590px;	/* Cambiar a 580px al quitar los bordes */
+	width: 585px;	/* Cambiar a 580px al quitar los bordes */
 	height: 55px;
 }
 

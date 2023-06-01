@@ -1,6 +1,6 @@
-/*div#contenido-foto {
-    border: 1px solid blue;
-}*/
+div#contenido-foto {
+    margin-bottom: 670px;
+}
 
 div#contenido-foto > div {
     float: left;
@@ -9,15 +9,13 @@ div#contenido-foto > div {
 div#contenido-foto > div.foto {
     border: 1px solid red;
 
-    background-image: url("https://picsum.photos/570/660/?random=2");
-
     width: 570px;
     height: 660px;
 }
 /* </foto> */
 /* <textos> */
 div#contenido-foto > div.textos {
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
 
     width: 594px;
     height: 660px;
@@ -30,7 +28,7 @@ div.textos > div {
 }
 
 div.textos > div.titulo {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 
     width: 550px;
 
@@ -38,7 +36,7 @@ div.textos > div.titulo {
 }
 
 div.textos > div.descripcion-corta {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 
     width: 550px;
 
@@ -46,7 +44,7 @@ div.textos > div.descripcion-corta {
 }
 
 div.textos > div.descripcion-larga {
-    border: 1px solid gold;
+    /*border: 1px solid gold;*/
 
     width: 550px;
 
@@ -54,13 +52,13 @@ div.textos > div.descripcion-larga {
 }
 
 div.informacion {
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
 
     width: 550px;
 }
 
 div.textos > div.informacion > div {
-    border-bottom: 1px dashed pink;
+    border-bottom: 1px dashed blue;
 
     width: 530px;
     padding: 10px;
@@ -92,7 +90,7 @@ div.mas-info > a:hover {
 }
 
 div.textos > div.botones > div.volver {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 
     width: 65px;
     float: right;
@@ -121,5 +119,10 @@ div.textos > div.botones > div.volver > a {
 
 div.textos > div.botones > div.volver > a:hover {
     color: #d8450b;
+}
+
+div.textos > div.visitas {
+    position: absolute;
+    top: 720px;
 }
 /* </textos> */

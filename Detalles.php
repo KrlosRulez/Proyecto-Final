@@ -1,5 +1,12 @@
 <?php 
 	include ("conexion.php"); 
+
+	$cod_juego = $_GET['Juego'];
+
+	$sql_visitas = "UPDATE Juegos SET Visitas = Visitas + 1 WHERE Codigo_Juego = $cod_juego";
+
+	$resul = $conexion->query($sql_visitas);
+
 ?>
 
 <!DOCTYPE html>
@@ -35,46 +42,49 @@
 
         <div id="contenido-foto">
 
-            <div class="foto"></div>
+		<?php 
+		
+		$sql = $conexion->query("SELECT * FROM Juegos WHERE Codigo_Juego = $cod_juego");
+
+		while ($fila=$sql -> fetch_array()) { 
+			
+		?>
+
+            <div class="foto">
+				<img src="img/<?php echo $fila[1]; ?>" width="100%" height="100%">
+			</div>
 
             <div class="textos">
 
-                <div class="titulo">TÍTULO DE LA FOTO</div>
+                <div class="titulo"><?php echo $fila[2]; ?></div>
 				<div class="descripcion-corta">
-					Descripción de la foto
-					Descripción de la foto
-					Descripción de la foto
-					Descripción de la foto
-					Descripción de la foto
+					<?php echo $fila[3]; ?>
 				</div>
 				<div class="descripcion-larga">
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
-					Movidas de la foto Movidas de la foto
+					<?php echo $fila[4]; ?>
 				</div>
 				<div class="informacion">
 					<div class="nombre-juego">
-						JUEGO:
+						JUEGO: <?php echo $fila[5]; ?>
 					</div>
 					<div class="consola">
-						CONSOLAS:
+						CONSOLAS: <?php echo $fila[6]; ?>
 					</div>
 					<div class="genero">
-						GÉNERO:
+						GÉNERO: <?php echo $fila[7]; ?>
 					</div>
 					<div class="fecha">
-						FECHA DE LANZAMIENTO:
+						FECHA DE LANZAMIENTO: 
+						<?php 
+						
+						$fecha_mysql = $fila[8];
+						$fecha = strtotime($fecha_mysql);
+						echo date("d-m-Y", $fecha); 
+						
+						?>
 					</div>
 					<div class="estudio">
-						ESTUDIO:
+						ESTUDIO: <?php echo $fila[9]; ?>
 					</div>
 				</div>
 				<div class="botones">
@@ -84,15 +94,20 @@
 						</a>
 					</div>
 					<div class="volver">
-						<a href="index.html">
+						<a href="index.php">
 							<div class="imagen"></div>
 							<p>Volver...</p>
 						</a>
 					</div>
 				</div>
+				<div class="visitas">
+					Visitas: <?php echo $fila[10]; ?>
+				</div>
             </div>
 
         </div>
+
+		<?php } ?>
 
 		<?php include ("pie.php"); ?>
 
