@@ -42,25 +42,32 @@
                 </div>
 
                 <div class="descripcion">
-                    datos para contactar con nosotros
-                    datos para contactar con nosotros
-                    datos para contactar con nosotros
-                    datos para contactar con nosotros
-                    datos para contactar con nosotros
-                    datos para contactar con nosotros
-                    datos para contactar con nosotros
-                    datos para contactar con nosotros
+                    Si tienes alguna duda, sugerencia o 
+                    noticia puedes contactar con nosotros 
+                    y enviarnos tus datos, te contestaremos
+                    lo antes posible, gracias por visitar 
+                    Maquinitas.com!
                 </div>
 
                 <div class="advertencia">
-                    Este es un mensaje de advertencia, así que te advierte de algo, quedas advertido.
+
+                    <?php if (isset($_GET["correo"])) { ?>
+
+                    Correo Enviado Correctamente
+
+                    <?php } else { ?>
+
+                    El correo se enviará directamente al e-mail del jefe -> nietofresnedacarlos97@gmail.com
+
+                    <?php } ?>
+
                 </div>
 
             </div>
 
             <div class="formulario">
 
-                <form action="" method="post">
+                <form action="confirmacion.php" method="post">
 
                     <div class="nombre">
                         <div class="foto"></div>
@@ -82,7 +89,7 @@
                     </div>
 
                     <div class="botonenviar">
-                        <input type="submit" value="Enviar Mensaje">
+                        <input type="submit" name="enviar" value="Enviar Mensaje">
                     </div>
 
                 </form>

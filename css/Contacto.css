@@ -1,12 +1,12 @@
 div#contenido {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 
     position: relative;
 }
 
 /* Textos */
 div#contenido > div.textos {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 
     width: 750px;
     margin: 10px;
@@ -18,17 +18,17 @@ div.textos > div {
 }
 
 div.textos > div.titulo {
-    border: 1px solid purple;
-
+    /*border: 1px solid purple;*/ 
+    text-decoration: underline;
     font-size: 40px;
 }
 
-div.textos > div.descripcion {
+/*div.textos > div.descripcion {
     border: 1px solid green;
-}
+}*/
 
 div.textos > div.advertencia {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 
     border-radius: 10px;
 
@@ -38,7 +38,7 @@ div.textos > div.advertencia {
 
 /* Formulario */
 div#contenido > div.formulario {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 
     width: 750px;
     height: 370px;
@@ -104,7 +104,7 @@ div.formulario > form > div.web > div.foto {
 
 /* Información Derecha */
 div#contenido > div.info {
-    border: 1px solid pink;
+    /*border: 1px solid pink;*/
 
     margin: 10px;
     padding: 10px;
@@ -116,9 +116,9 @@ div#contenido > div.info {
     left: 770px;
 }
 
-div.info > div.datos {
+/*div.info > div.datos {
     border: 1px solid red;
-}
+}*/
 
 div.info > div.datos > div.titulo {
     border-top: 1px dashed yellow;
@@ -126,7 +126,7 @@ div.info > div.datos > div.titulo {
 
     padding: 10px;
     font-family: 'Oswald';
-    font-size: 20px;
+    font-size: 30px;
 }
 
 div.info > div.datos > div.texto {
@@ -142,7 +142,7 @@ div.info > div.datos > div.texto > span {
 }
 
 div.info > div.mapa {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 
     margin-top: 10px;
     height: 280px;
@@ -154,11 +154,11 @@ div.info > div.mapa > div.titulo {
 
     padding: 10px;
     font-family: 'Oswald';
-    font-size: 20px;
+    font-size: 30px;
 }
 
 div.info > div.mapa > div.dibujo {
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
 
     height: 237px;
 }

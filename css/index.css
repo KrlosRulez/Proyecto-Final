@@ -252,7 +252,7 @@ div#galeria > div.noticia > div {
 }
 
 div#galeria > div.noticia > div.titulo_noticia {
-	border: 1px solid yellow;
+	/*border: 1px solid yellow;*/
 
 	margin: 10px;
 	width: 320px;
@@ -260,7 +260,7 @@ div#galeria > div.noticia > div.titulo_noticia {
 }
 
 div#galeria > div.noticia > div.descripcion_noticia {
-	border: 1px solid green;
+	/*border: 1px solid green;*/
 
 	margin: 10px;
 	width: 320px;
@@ -270,7 +270,7 @@ div#galeria > div.noticia > div.descripcion_noticia {
 }
 
 div#galeria > div.noticia > div.parrafo_noticia {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 
 	margin: 10px;
 	width: 320px;
@@ -319,18 +319,18 @@ div.boton-mas > div.texto > a:hover {
 /* <contenido> */
 
 div#contenido {
-    position: relative;
+	/*border: 1px solid green;*/
+	position: relative;
 
 	overflow: hidden;
 	width: 1088px;
-	/*height: 700px; /* Quitar Luego */
 	margin: 30px auto;
-	border: 1px solid green;
 }
 
 div#contenido > ul > li.noticia {
 	float: left;
 	border: 2px dotted lawngreen;
+	border-radius: 4px;
 	width: 248px;
 	height: 275px;
 	margin: 10px;

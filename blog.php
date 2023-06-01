@@ -260,7 +260,34 @@
                     <div class="titulo">Video Widget</div>
 
                     <div class="widget">
+
+                    <?php 
+                    
+                    if (isset($_GET['categoria'])) {
+                        $categoria = $_GET['categoria'];
+                    ?>
+                        <?php if ($categoria == 1) { ?>
+                            <iframe width="377" height="245" src="https://www.youtube.com/embed/yHZ7qjSmr2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } else if ($categoria == 2) { ?>
+                            <iframe width="377" height="245" src="https://www.youtube.com/embed/6jU72s91b48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } else if ($categoria == 3) { ?>
+                            <iframe width="377" height="245" src="https://www.youtube.com/embed/t0NQ3Cg4knI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } else if ($categoria == 4) { ?>
+                            <iframe width="377" height="245" src="https://www.youtube.com/embed/G1fe84mQuKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } else if ($categoria == 5) { ?>
+                            <iframe width="377" height="245" src="https://www.youtube.com/embed/QvEDSkK3GQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } else if ($categoria == 6) { ?>
+                            <iframe width="377" height="245" src="https://www.youtube.com/embed/afqO1qGr2XM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } else if ($categoria == 7) { ?>
+                            <iframe width="377" height="245" src="https://www.youtube.com/embed/-ThjInNhEe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } ?>
+
+                    <?php } else { ?>
+
                         <iframe width="377" height="245" src="https://www.youtube.com/embed/1INU3FOJsTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    
+                    <?php } ?>
+
                     </div>
 
                 </div>

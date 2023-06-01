@@ -146,7 +146,7 @@
 						<img src="img/<?php echo $fila[1]; ?>" width="100%" height="100%" />
 
 						<div class="lupa">
-							<a href="#"></a>
+							<a href="imagen.php?Noticia=<?php echo $fila[0]; ?>" target="_blank"></a>
 						</div>
 						<div class="detalles_foto">
 							<a href="Detalles.php?Juego=<?php echo $fila[4]; ?>"></a>
